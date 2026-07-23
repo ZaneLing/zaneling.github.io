@@ -1,38 +1,38 @@
-# Ziyang Ling — Personal Academic Website
+# Ziyang Ling — Bilingual Academic Homepage
 
-This repository hosts the personal academic website of **Ziyang Ling**.
+A compact bilingual academic homepage for GitHub Pages.
 
-## Deploy on GitHub Pages
+## Features
 
-1. Create a public repository named `zaneling.github.io`.
-2. Upload all files from this folder to the repository root.
-3. Commit the files to the `main` branch.
-4. Open **Settings → Pages**.
-5. Under **Build and deployment**, choose:
-   - Source: `Deploy from a branch`
-   - Branch: `main`
-   - Folder: `/ (root)`
-6. Save and wait for GitHub Pages to publish the site.
+- English and Chinese interface
+- Language preference stored in the browser
+- Publications and projects displayed as separate rows
+- Responsive layout
+- No framework or build process
+- CV hosted as a static PDF
 
-The website will be available at:
+## Deploy
 
-`https://zaneling.github.io`
+1. Create or open the public repository `zaneling.github.io`.
+2. Upload all files in this directory to the repository root.
+3. Open **Settings → Pages**.
+4. Set the source to **Deploy from a branch**.
+5. Select the `main` branch and `/ (root)`.
+6. Visit `https://zaneling.github.io`.
 
-## Files
+## Repository structure
 
-- `index.html` — Main page
-- `style.css` — Responsive design
-- `script.js` — Mobile navigation and footer year
-- `assets/Ziyang_Ling_CV.pdf` — CV
+```text
+zaneling.github.io/
+├── assets/
+│   ├── favicon.svg
+│   └── Ziyang_Ling_CV.pdf
+├── index.html
+├── script.js
+├── style.css
+├── .nojekyll
+└── README.md
+```
 
-## Customize
-
-Edit `index.html` to update:
-
-- Biography
-- Publications
-- Project links
-- Contact details
-- Research interests
-
-No build system is required.
+The website is intentionally static. Python is not required for GitHub Pages.
+For Python research repositories, use the separate Python project template supplied with this site.
