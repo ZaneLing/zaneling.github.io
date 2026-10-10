@@ -1,55 +1,102 @@
-const copy = {
-  en: {
-    skip: 'Skip to content', 'nav.about': 'About', 'nav.work': 'Work', 'nav.contact': 'Contact',
-    'hero.eyebrow': 'Researcher · USTC', 'hero.greeting': "Hello, I'm", 'hero.name': 'Ziyang Ling.',
-    'hero.description': 'I work on language model reasoning and multi-agent systems, with a focus on applications in biomedicine.',
-    'hero.contact': 'Get in touch', 'hero.work': 'Explore my work', 'hero.connect': 'Find me online',
-    'about.title': 'About', 'about.statement': "I am a master's student at the University of Science and Technology of China. I study how AI systems can reason across complex evidence and collaborate on scientific and medical tasks.",
-    'about.detail': 'My interests include multi-hop question answering, retrieval-augmented generation, knowledge graphs, and biomedical AI.',
-    'about.location.label': 'Based in', 'about.location': 'Hefei, China', 'about.education.label': 'Education', 'about.education': 'M.S. · USTC', 'about.focus.label': 'Focus', 'about.focus': 'NLP · Agents · Bio AI',
-    'work.title': 'Selected work', 'work.thor': 'A hierarchical reasoning framework for multi-hop question answering that coordinates evidence and checks errors along the way.',
-    'work.organoid': 'An interactive workspace for organoid research, combining literature retrieval, data exploration, question answering, and knowledge graphs.',
-    'work.prismatic': 'A multi-agent system for reviewing prescriptions and supporting medication safety decisions.',
-    'work.paper': 'Paper', 'work.code': 'Code', 'work.project': 'Project', 'work.repository': 'Repository', 'work.more': 'More publications on Google Scholar',
-    'contact.title': "Let's connect", 'contact.lead': "Interested in research collaborations or internships? I'd be glad to hear from you.", 'footer.top': 'Back to top ↑'
-  },
+const translations = {
   zh: {
-    skip: '跳转到正文', 'nav.about': '关于', 'nav.work': '研究', 'nav.contact': '联系',
-    'hero.eyebrow': '研究者 · 中国科学技术大学', 'hero.greeting': '你好，我是', 'hero.name': '凌子扬。',
-    'hero.description': '我研究大语言模型推理与多智能体系统，关注其在生物医学领域的应用。',
-    'hero.contact': '联系我', 'hero.work': '查看研究', 'hero.connect': '学术与社交主页',
-    'about.title': '关于我', 'about.statement': '我是中国科学技术大学的硕士研究生，关注人工智能如何整合复杂证据进行推理，以及如何协作完成科学与医学任务。',
-    'about.detail': '我的研究兴趣包括多跳问答、检索增强生成、知识图谱和生物医学人工智能。',
-    'about.location.label': '所在地', 'about.location': '中国 · 合肥', 'about.education.label': '教育', 'about.education': '中国科学技术大学 · 硕士', 'about.focus.label': '研究方向', 'about.focus': '自然语言处理 · 智能体 · 生物医学 AI',
-    'work.title': '代表工作', 'work.thor': '面向多跳问答的层次化推理框架，协调跨文档证据，并在推理过程中识别与修正错误。',
-    'work.organoid': '面向类器官研究的交互平台，结合文献检索、数据探索、智能问答与知识图谱。',
-    'work.prismatic': '用于处方审查与用药安全决策支持的多智能体系统。',
-    'work.paper': '论文', 'work.code': '代码', 'work.project': '项目', 'work.repository': '项目仓库', 'work.more': '在 Google Scholar 查看更多论文',
-    'contact.title': '保持联系', 'contact.lead': '欢迎就研究合作或实习机会与我交流。', 'footer.top': '返回顶部 ↑'
+    skip: '跳转到正文',
+    'nav.about': '关于', 'nav.news': '动态', 'nav.research': '论文', 'nav.projects': '项目', 'nav.education': '教育', 'nav.experience': '经历', 'nav.contact': '联系',
+    'about.p1': '你好！我是<a href="https://www.ustc.edu.cn/" target="_blank" rel="noopener noreferrer">中国科学技术大学</a>计算机科学专业的硕士研究生。我的研究聚焦于大语言模型推理与多智能体系统，尤其关注生物医学和临床场景中的应用。',
+    'about.p2': '我关注智能体如何检索证据、协调专门化角色，并做出更可靠的决策。目前我在字节跳动实习。',
+    'portrait.caption': '凌子扬 / Ziyang Ling',
+    'news.title': '最新动态', 'news.date1': '2026年10月', 'news.date2': '2026年8月', 'news.date3': '2026年7月',
+    'news.item1': '<strong>PRISMATIC</strong> 预印本已发布于 <a href="https://zenodo.org/records/23281340" target="_blank" rel="noopener noreferrer">Zenodo</a>。',
+    'news.item2': '开始在<strong>字节跳动</strong>实习。',
+    'news.item3': '<strong>THOR</strong> 论文发表于 <strong>ACL 2026</strong>。',
+    'research.title': '代表论文', 'research.more': '全部论文', 'research.note': '精选论文与预印本',
+    'research.thor.venue': '计算语言学协会年会（ACL）2026',
+    'research.thor.description': '受脑节律启发的多跳问答框架，将全局规划与局部证据检索分离，并通过验证与修复提升推理可靠性。',
+    'research.prismatic.venue': '预印本 · Zenodo',
+    'research.prismatic.description': '由专门化智能体协作分析临床信息、完善处方，并通过反馈机制减少药物冲突、提高治疗方案一致性。',
+    'link.paper': '论文 ↗', 'link.preprint': '预印本 ↗', 'link.code': '代码 ↗', 'link.github': 'GitHub ↗',
+    'projects.title': '项目', 'projects.more': '更多 GitHub 项目',
+    'projects.organoid': '面向类器官研究的数据探索、文献检索、智能问答与知识图谱平台，采用 Vue 和 Django 构建。',
+    'projects.subhealth': '用于亚健康模拟与协同决策的多智能体系统探索。',
+    'education.title': '教育经历', 'education.ustc.name': '中国科学技术大学', 'education.ustc.degree': '计算机科学 · 硕士', 'education.ustc.date': '2024年9月－至今',
+    'education.ccnu.name': '华中师范大学', 'education.ccnu.degree': '学士', 'education.ccnu.date': '2015年9月－2019年6月',
+    'experience.title': '工作经历', 'experience.bytedance.name': '字节跳动', 'experience.bytedance.role': '实习生', 'experience.bytedance.date': '2026年8月－至今',
+    'contact.title': '联系', 'contact.text': '欢迎围绕大语言模型推理、多智能体系统和生物医学人工智能交流。'
   }
 };
 
+const translatable = [...document.querySelectorAll('[data-i18n], [data-i18n-html]')];
+const originalCopy = new Map(translatable.map((element) => [element, element.hasAttribute('data-i18n-html') ? element.innerHTML : element.textContent]));
 const toggle = document.getElementById('language-toggle');
-const description = document.querySelector('meta[name="description"]');
+const detail = document.getElementById('other-language');
+const detailLabel = document.getElementById('other-language-label');
+const detailContent = document.getElementById('other-language-content');
+const englishIntro = "I am a master's student in Computer Science at the University of Science and Technology of China. I study language model reasoning, multi-agent systems, and their biomedical applications. I am currently an intern at ByteDance.";
+const chineseIntro = '我是中国科学技术大学计算机科学专业的硕士研究生，研究大语言模型推理、多智能体系统及其在生物医学和临床场景中的应用。目前我在字节跳动实习。';
 
-function applyLanguage(language) {
+function setLanguage(language) {
   const current = language === 'zh' ? 'zh' : 'en';
+  for (const element of translatable) {
+    const key = element.dataset.i18n || element.dataset.i18nHtml;
+    const value = current === 'zh' ? translations.zh[key] : originalCopy.get(element);
+    if (value === undefined) continue;
+    if (element.hasAttribute('data-i18n-html')) element.innerHTML = value;
+    else element.textContent = value;
+  }
   document.documentElement.lang = current === 'zh' ? 'zh-CN' : 'en';
-  document.title = current === 'zh' ? '凌子扬 · 个人主页' : 'Ziyang Ling · Researcher';
-  description.content = current === 'zh'
+  document.title = current === 'zh' ? '凌子扬 | Ziyang Ling' : 'Ziyang Ling | 凌子扬';
+  document.querySelector('meta[name="description"]').content = current === 'zh'
     ? '凌子扬的个人主页。中国科学技术大学硕士研究生，研究大语言模型推理、多智能体系统和生物医学人工智能。'
-    : "Ziyang Ling is a master's student at USTC researching language model reasoning, multi-agent systems, and biomedical AI.";
-  document.querySelectorAll('[data-i18n]').forEach((element) => {
-    const translation = copy[current][element.dataset.i18n];
-    if (translation) element.textContent = translation;
-  });
-  toggle.innerHTML = current === 'zh' ? 'EN <span aria-hidden="true">↗</span>' : '中文 <span aria-hidden="true">↗</span>';
+    : "Ziyang Ling is a master's student at USTC working on language model reasoning, multi-agent systems, and biomedical AI.";
+  toggle.textContent = current === 'zh' ? 'English' : '中文';
   toggle.setAttribute('aria-label', current === 'zh' ? 'Switch to English' : '切换到中文');
-  try { localStorage.setItem('preferred-language', current); } catch (_) { /* Storage may be unavailable. */ }
+  detail.open = false;
+  detailLabel.textContent = current === 'zh' ? 'English introduction' : '中文简介';
+  detailContent.textContent = current === 'zh' ? englishIntro : chineseIntro;
+  document.querySelector('.profile-portrait img').alt = current === 'zh' ? '凌子扬在水边的照片' : 'Portrait of Ziyang Ling standing beside the water';
+  document.querySelectorAll('.paper-figure').forEach((button) => {
+    const subject = button.dataset.caption.startsWith('THOR') ? 'THOR' : 'PRISMATIC';
+    button.setAttribute('aria-label', current === 'zh' ? `放大${subject}研究图` : `Enlarge ${button.dataset.caption} figure`);
+  });
+  document.querySelector('.dialog-close').setAttribute('aria-label', current === 'zh' ? '关闭图片' : 'Close figure');
+  try { localStorage.setItem('preferred-language', current); } catch (_) { /* Continue without storage. */ }
 }
 
-toggle.addEventListener('click', () => applyLanguage(document.documentElement.lang.startsWith('zh') ? 'en' : 'zh'));
+toggle.addEventListener('click', () => setLanguage(document.documentElement.lang.startsWith('zh') ? 'en' : 'zh'));
 document.getElementById('year').textContent = new Date().getFullYear();
 let savedLanguage;
-try { savedLanguage = localStorage.getItem('preferred-language'); } catch (_) { /* Storage may be unavailable. */ }
-applyLanguage(savedLanguage || (navigator.language?.startsWith('zh') ? 'zh' : 'en'));
+try { savedLanguage = localStorage.getItem('preferred-language'); } catch (_) { /* Continue without storage. */ }
+setLanguage(savedLanguage || (navigator.language?.startsWith('zh') ? 'zh' : 'en'));
+
+const sections = [...document.querySelectorAll('main > section[id]')];
+const navLinks = [...document.querySelectorAll('.nav-link')];
+let updatePending = false;
+function updateActiveSection() {
+  const position = window.scrollY + Math.min(window.innerHeight * 0.38, 280);
+  let active = sections[0].id;
+  for (const section of sections) if (section.offsetTop <= position) active = section.id;
+  navLinks.forEach((link) => {
+    const selected = link.getAttribute('href') === `#${active}`;
+    link.classList.toggle('is-active', selected);
+    if (selected) link.setAttribute('aria-current', 'location');
+    else link.removeAttribute('aria-current');
+  });
+  updatePending = false;
+}
+window.addEventListener('scroll', () => {
+  if (!updatePending) { updatePending = true; requestAnimationFrame(updateActiveSection); }
+}, {passive:true});
+window.addEventListener('resize', updateActiveSection);
+updateActiveSection();
+
+const figureDialog = document.getElementById('figure-dialog');
+const dialogImage = document.getElementById('dialog-image');
+const dialogCaption = document.getElementById('dialog-caption');
+document.querySelectorAll('.paper-figure').forEach((button) => button.addEventListener('click', () => {
+  dialogImage.src = button.dataset.figure;
+  dialogImage.alt = button.dataset.caption;
+  dialogCaption.textContent = button.dataset.caption;
+  figureDialog.showModal();
+}));
+figureDialog.querySelector('.dialog-close').addEventListener('click', () => figureDialog.close());
+figureDialog.addEventListener('click', (event) => { if (event.target === figureDialog) figureDialog.close(); });

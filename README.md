@@ -1,26 +1,29 @@
 # Ziyang Ling · Personal Homepage
 
-A simple bilingual personal website for GitHub Pages. It is plain HTML, CSS, and JavaScript; no build step is needed.
+A bilingual academic homepage for GitHub Pages. It uses plain HTML, CSS, and JavaScript, with no build step. The layout follows [Haolin Yang's homepage](https://tidalharley.github.io/) at the site owner's request; this repository contains its own copy and styling.
 
 ## Content
 
-- English and Chinese, with an automatic browser-language default and a manual switch
-- Short bio, selected work, and contact information
-- Links to ORCID, Google Scholar, LinkedIn, and GitHub
-- Responsive layout for desktop and mobile
+- About section with a personal portrait and English/Chinese introductions
+- News, research papers, GitHub projects, education, and experience
+- Links to email, Google Scholar, GitHub, ORCID, and LinkedIn
+- Responsive section navigation and expandable research figures
 
-## Preview locally
+## Edit
 
-From this folder, run `python3 -m http.server 8765` and open `http://localhost:8765`.
+- `index.html`: page structure, links, and English copy
+- `script.js`: Chinese copy, language switch, section navigation, figure preview
+- `style.css`: layout and visual design
+- `assets/`: portrait, research figures, favicon, and an older unlinked CV
 
-## Publish on GitHub Pages
+The portrait was copied from the photo supplied by Ziyang Ling with EXIF metadata removed. The THOR diagram comes from the `Theta-Gamma` repository. The PRISMATIC diagram was extracted from the preprint at Zenodo record `23281340`.
 
-In this repository's **Settings → Pages**, choose **Deploy from a branch**, `main`, and `/ (root)`. The homepage will be available at `https://zaneling.github.io/` after GitHub finishes deploying.
+The older CV remains unlinked pending a review of its publication list.
 
-## Edit the site
+## Local preview
 
-- `index.html` contains the page structure and profile links.
-- `script.js` contains the English and Chinese text.
-- `style.css` contains layout and colors.
+Run `python3 -m http.server 8765` and open `http://localhost:8765`.
 
-The existing `assets/Ziyang_Ling_CV.pdf` is kept in the repository but is not linked from the homepage. Review and update it before making it public again: its publication list includes a 2025 biomedical named entity recognition paper whose published author list does not include Ziyang Ling.
+## Publishing
+
+GitHub Pages deploys from the `main` branch root to `https://zaneling.github.io/`.

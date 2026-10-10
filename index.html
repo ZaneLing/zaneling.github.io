@@ -3,97 +3,118 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f5f4ef">
-  <meta name="description" content="Ziyang Ling is a master's student at USTC researching language model reasoning, multi-agent systems, and biomedical AI.">
-  <title>Ziyang Ling · Researcher</title>
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Ziyang Ling is a master's student at USTC working on language model reasoning, multi-agent systems, and biomedical AI.">
+  <title>Ziyang Ling | 凌子扬</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a class="wordmark" href="#top" aria-label="Ziyang Ling, homepage">ZL<span>.</span></a>
-      <nav aria-label="Main navigation">
-        <a href="#about" data-i18n="nav.about">About</a>
-        <a href="#work" data-i18n="nav.work">Work</a>
-        <a href="#contact" data-i18n="nav.contact">Contact</a>
+  <a class="skip-link" href="#about" data-i18n="skip">Skip to main content</a>
+  <aside class="section-nav" aria-label="Page sections">
+    <div class="nav-inner">
+      <a class="nav-label" href="#about">Index</a>
+      <nav class="nav-track" aria-label="Sections">
+        <a class="nav-link is-active" href="#about" data-i18n="nav.about">About</a>
+        <a class="nav-link" href="#news" data-i18n="nav.news">News</a>
+        <a class="nav-link" href="#research" data-i18n="nav.research">Research</a>
+        <a class="nav-link" href="#projects" data-i18n="nav.projects">Projects</a>
+        <a class="nav-link" href="#education" data-i18n="nav.education">Education</a>
+        <a class="nav-link" href="#experience" data-i18n="nav.experience">Experience</a>
+        <a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a>
       </nav>
-      <button class="language-toggle" id="language-toggle" type="button" aria-label="切换到中文">中文 <span aria-hidden="true">↗</span></button>
+      <button id="language-toggle" class="language-toggle" type="button" aria-label="切换到中文">中文</button>
     </div>
-  </header>
+  </aside>
 
-  <main id="main">
-    <section class="hero wrap" id="top" aria-labelledby="hero-name">
-      <div class="hero-main">
-        <p class="eyebrow"><span class="signal" aria-hidden="true"></span><span data-i18n="hero.eyebrow">Researcher · USTC</span></p>
-        <h1 id="hero-name"><span data-i18n="hero.greeting">Hello, I'm</span><br><span class="hero-name" data-i18n="hero.name">Ziyang Ling.</span></h1>
-        <p class="hero-description" data-i18n="hero.description">I work on language model reasoning and multi-agent systems, with a focus on applications in biomedicine.</p>
-        <div class="hero-actions">
-          <a class="primary-link" href="mailto:zanelling@mail.ustc.edu.cn"><span data-i18n="hero.contact">Get in touch</span><span aria-hidden="true">↗</span></a>
-          <a class="text-link" href="#work"><span data-i18n="hero.work">Explore my work</span><span aria-hidden="true">↗</span></a>
+  <main class="page-shell">
+    <section class="profile" id="about" aria-labelledby="profile-name">
+      <div class="profile-copy">
+        <h1 class="name" id="profile-name"><span>Ziyang Ling</span><span class="name-divider">/</span><span class="chinese-name">凌子扬</span></h1>
+        <p class="profile-intro" data-i18n-html="about.p1">Hi there! I am a master's student in Computer Science at the <a href="https://www.ustc.edu.cn/" target="_blank" rel="noopener noreferrer">University of Science and Technology of China</a>. My research focuses on language model reasoning and multi-agent systems, especially for biomedical and clinical applications.</p>
+        <p class="profile-intro" data-i18n="about.p2">I am interested in how agents retrieve evidence, coordinate specialized roles, and make more reliable decisions. I am currently an intern at ByteDance.</p>
+        <details class="other-language" id="other-language">
+          <summary id="other-language-label">中文简介</summary>
+          <div id="other-language-content" class="other-language-content">我是中国科学技术大学计算机科学专业的硕士研究生，研究大语言模型推理、多智能体系统及其在生物医学和临床场景中的应用。目前我在字节跳动实习。</div>
+        </details>
+        <div class="profile-links" aria-label="Contact and profiles">
+          <a href="mailto:zanelling@mail.ustc.edu.cn"><span class="link-icon mail-icon" aria-hidden="true">✉</span>Email</a>
+          <a href="https://scholar.google.com/citations?user=Zq9v8esAAAAJ&amp;hl=zh-CN" target="_blank" rel="me noopener noreferrer"><span class="link-icon scholar-icon" aria-hidden="true">G</span>Google Scholar</a>
+          <a href="https://github.com/ZaneLing" target="_blank" rel="me noopener noreferrer"><span class="link-icon github-icon" aria-hidden="true">⌘</span>GitHub</a>
+          <a href="https://orcid.org/0009-0002-2487-969X" target="_blank" rel="me noopener noreferrer"><span class="link-icon orcid-icon" aria-hidden="true">iD</span>ORCID</a>
+          <a href="https://www.linkedin.com/in/zaneling0704/" target="_blank" rel="me noopener noreferrer"><span class="link-icon linkedin-icon" aria-hidden="true">in</span>LinkedIn</a>
         </div>
       </div>
-      <aside class="hero-aside" aria-label="Profiles">
-        <p class="aside-label" data-i18n="hero.connect">Find me online</p>
-        <div class="profile-links">
-          <a href="https://orcid.org/0009-0002-2487-969X" target="_blank" rel="me noopener noreferrer"><span>ORCID</span><span aria-hidden="true">↗</span></a>
-          <a href="https://scholar.google.com/citations?user=Zq9v8esAAAAJ&amp;hl=zh-CN" target="_blank" rel="me noopener noreferrer"><span>Google Scholar</span><span aria-hidden="true">↗</span></a>
-          <a href="https://www.linkedin.com/in/zaneling0704/" target="_blank" rel="me noopener noreferrer"><span>LinkedIn</span><span aria-hidden="true">↗</span></a>
-          <a href="https://github.com/ZaneLing" target="_blank" rel="me noopener noreferrer"><span>GitHub</span><span aria-hidden="true">↗</span></a>
-        </div>
-      </aside>
+      <figure class="profile-portrait">
+        <img src="assets/profile.jpg" alt="Portrait of Ziyang Ling standing beside the water" width="1730" height="1962" fetchpriority="high">
+        <figcaption data-i18n="portrait.caption">Ziyang Ling / 凌子扬</figcaption>
+      </figure>
     </section>
 
-    <section class="section wrap" id="about" aria-labelledby="about-title">
-      <div class="section-heading"><span class="section-index">01 /</span><h2 id="about-title" data-i18n="about.title">About</h2></div>
-      <div class="section-body about-grid">
-        <div>
-          <p class="statement" data-i18n="about.statement">I am a master's student at the University of Science and Technology of China. I study how AI systems can reason across complex evidence and collaborate on scientific and medical tasks.</p>
-          <p class="muted" data-i18n="about.detail">My interests include multi-hop question answering, retrieval-augmented generation, knowledge graphs, and biomedical AI.</p>
-        </div>
-        <div class="facts">
-          <div><span data-i18n="about.location.label">Based in</span><strong data-i18n="about.location">Hefei, China</strong></div>
-          <div><span data-i18n="about.education.label">Education</span><strong data-i18n="about.education">M.S. · USTC</strong></div>
-          <div><span data-i18n="about.focus.label">Focus</span><strong data-i18n="about.focus">NLP · Agents · Bio AI</strong></div>
-        </div>
+    <section class="page-section news-section" id="news" aria-labelledby="news-heading">
+      <h2 class="section-title" id="news-heading" data-i18n="news.title">News</h2>
+      <ol class="news-list">
+        <li><time datetime="2026-10" data-i18n="news.date1">Oct 2026</time><span data-i18n-html="news.item1">The <strong>PRISMATIC</strong> preprint is available on <a href="https://zenodo.org/records/23281340" target="_blank" rel="noopener noreferrer">Zenodo</a>.</span></li>
+        <li><time datetime="2026-08" data-i18n="news.date2">Aug 2026</time><span data-i18n-html="news.item2">Started an internship at <strong>ByteDance</strong>.</span></li>
+        <li><time datetime="2026-07" data-i18n="news.date3">Jul 2026</time><span data-i18n-html="news.item3"><strong>THOR</strong> was published at <strong>ACL 2026</strong>.</span></li>
+      </ol>
+    </section>
+
+    <section class="page-section" id="research" aria-labelledby="research-heading">
+      <div class="section-heading"><h2 class="section-title" id="research-heading" data-i18n="research.title">Highlight Research</h2><a class="section-more" href="https://scholar.google.com/citations?user=Zq9v8esAAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener noreferrer" data-i18n="research.more">All Research Papers</a></div>
+      <p class="section-note" data-i18n="research.note">Selected publications and preprints</p>
+      <div class="paper-list">
+        <article class="paper-row">
+          <button class="paper-figure" type="button" data-figure="assets/thor-overview.webp" data-caption="THOR overview" aria-label="Enlarge THOR overview figure"><img src="assets/thor-overview.webp" alt="Diagram of the THOR theta-gamma reasoning framework" width="1600" height="900" loading="lazy"></button>
+          <div class="paper-copy">
+            <h3><a href="https://aclanthology.org/2026.acl-long.935/" target="_blank" rel="noopener noreferrer">THOR: A Theta-Gamma Hierarchical Oscillatory Reasoning Framework for Multi-hop QA</a></h3>
+            <p class="authors"><strong>Ziyang Ling</strong>, Ronald X. Xu, Mingzhai Sun</p>
+            <p class="venue" data-i18n="research.thor.venue">Annual Meeting of the Association for Computational Linguistics (ACL) 2026</p>
+            <p class="paper-description" data-i18n="research.thor.description">A brain-inspired framework that separates global planning from local evidence retrieval, with verification and repair to improve multi-hop question answering.</p>
+            <div class="paper-links"><a href="https://aclanthology.org/2026.acl-long.935/" target="_blank" rel="noopener noreferrer" data-i18n="link.paper">Paper ↗</a><a href="https://github.com/ZaneLing/Theta-Gamma" target="_blank" rel="noopener noreferrer" data-i18n="link.code">Code ↗</a></div>
+          </div>
+        </article>
+        <article class="paper-row">
+          <button class="paper-figure" type="button" data-figure="assets/prismatic-overview.webp" data-caption="PRISMATIC workflow" aria-label="Enlarge PRISMATIC workflow figure"><img src="assets/prismatic-overview.webp" alt="Diagram of the PRISMATIC multi-agent prescription workflow" width="1600" height="737" loading="lazy"></button>
+          <div class="paper-copy">
+            <h3><a href="https://zenodo.org/records/23281340" target="_blank" rel="noopener noreferrer">PRISMATIC: Prescription Risk Inspection System for Multi-Agent Treatment Interaction in Clinical Decision-Making</a></h3>
+            <p class="authors"><strong>Ziyang Ling</strong>, Shuyu Lu</p>
+            <p class="venue" data-i18n="research.prismatic.venue">Preprint · Zenodo</p>
+            <p class="paper-description" data-i18n="research.prismatic.description">Specialized agents collaborate to review clinical information and refine prescriptions, with feedback mechanisms to address drug conflicts and improve treatment consistency.</p>
+            <div class="paper-links"><a href="https://zenodo.org/records/23281340" target="_blank" rel="noopener noreferrer" data-i18n="link.preprint">Preprint ↗</a><a href="https://github.com/ZaneLing/PRISMATIC" target="_blank" rel="noopener noreferrer" data-i18n="link.code">Code ↗</a></div>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section class="section wrap" id="work" aria-labelledby="work-title">
-      <div class="section-heading"><span class="section-index">02 /</span><h2 id="work-title" data-i18n="work.title">Selected work</h2></div>
-      <div class="section-body">
-        <div class="work-list">
-          <article class="work-item">
-            <div class="work-meta"><span>2026</span><span>ACL · Research</span></div>
-            <div class="work-content"><h3>THOR</h3><p data-i18n="work.thor">A hierarchical reasoning framework for multi-hop question answering that coordinates evidence and checks errors along the way.</p><div class="work-actions"><a href="https://aclanthology.org/2026.acl-long.935/" target="_blank" rel="noopener noreferrer"><span data-i18n="work.paper">Paper</span> ↗</a><a href="https://github.com/ZaneLing/Theta-Gamma" target="_blank" rel="noopener noreferrer"><span data-i18n="work.code">Code</span> ↗</a></div></div>
-            <span class="work-arrow" aria-hidden="true">↗</span>
-          </article>
-          <article class="work-item">
-            <div class="work-meta"><span>2025–2026</span><span data-i18n="work.project">Project</span></div>
-            <div class="work-content"><h3>Organoid Chat</h3><p data-i18n="work.organoid">An interactive workspace for organoid research, combining literature retrieval, data exploration, question answering, and knowledge graphs.</p><div class="work-actions"><a href="https://github.com/ZaneLing/Organoid-Chat" target="_blank" rel="noopener noreferrer"><span data-i18n="work.repository">Repository</span> ↗</a></div></div>
-            <span class="work-arrow" aria-hidden="true">↗</span>
-          </article>
-          <article class="work-item">
-            <div class="work-meta"><span>2026</span><span data-i18n="work.project">Project</span></div>
-            <div class="work-content"><h3>PRISMATIC</h3><p data-i18n="work.prismatic">A multi-agent system for reviewing prescriptions and supporting medication safety decisions.</p><div class="work-actions"><a href="https://github.com/ZaneLing/PRISMATIC" target="_blank" rel="noopener noreferrer"><span data-i18n="work.repository">Repository</span> ↗</a></div></div>
-            <span class="work-arrow" aria-hidden="true">↗</span>
-          </article>
-        </div>
-        <a class="more-link" href="https://scholar.google.com/citations?user=Zq9v8esAAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener noreferrer"><span data-i18n="work.more">More publications on Google Scholar</span><span aria-hidden="true">↗</span></a>
+    <section class="page-section" id="projects" aria-labelledby="projects-heading">
+      <div class="section-heading"><h2 class="section-title" id="projects-heading" data-i18n="projects.title">Projects</h2><a class="section-more" href="https://github.com/ZaneLing?tab=repositories" target="_blank" rel="noopener noreferrer" data-i18n="projects.more">More on GitHub</a></div>
+      <div class="project-list">
+        <article class="project-row"><div><h3><a href="https://github.com/ZaneLing/Organoid-Chat" target="_blank" rel="noopener noreferrer">Organoid Chat</a></h3><p data-i18n="projects.organoid">A research workspace for organoid data exploration, literature retrieval, question answering, and knowledge graph integration. Built with Vue and Django.</p></div><a class="project-link" href="https://github.com/ZaneLing/Organoid-Chat" target="_blank" rel="noopener noreferrer" data-i18n="link.github">GitHub ↗</a></article>
+        <article class="project-row"><div><h3><a href="https://github.com/ZaneLing/Multi-Agent-4-SubHealth" target="_blank" rel="noopener noreferrer">Multi-Agent-4-SubHealth</a></h3><p data-i18n="projects.subhealth">An exploratory multi-agent system for subhealth simulation and collaborative decision-making.</p></div><a class="project-link" href="https://github.com/ZaneLing/Multi-Agent-4-SubHealth" target="_blank" rel="noopener noreferrer" data-i18n="link.github">GitHub ↗</a></article>
       </div>
     </section>
 
-    <section class="section contact-section wrap" id="contact" aria-labelledby="contact-title">
-      <div class="section-heading"><span class="section-index">03 /</span><h2 id="contact-title" data-i18n="contact.title">Let's connect</h2></div>
-      <div class="section-body">
-        <p class="contact-lead" data-i18n="contact.lead">Interested in research collaborations or internships? I'd be glad to hear from you.</p>
-        <a class="contact-email" href="mailto:zanelling@mail.ustc.edu.cn">zanelling@mail.ustc.edu.cn <span aria-hidden="true">↗</span></a>
-      </div>
+    <section class="page-section" id="education" aria-labelledby="education-heading">
+      <h2 class="section-title" id="education-heading" data-i18n="education.title">Education</h2>
+      <div class="institution-row"><div class="institution-mark">USTC</div><div class="institution-copy"><h3 data-i18n="education.ustc.name">University of Science and Technology of China</h3><p data-i18n="education.ustc.degree">M.S. in Computer Science</p></div><p class="institution-date" data-i18n="education.ustc.date">Sep 2024 – Present</p></div>
+      <div class="institution-row"><div class="institution-mark">CCNU</div><div class="institution-copy"><h3 data-i18n="education.ccnu.name">Central China Normal University</h3><p data-i18n="education.ccnu.degree">Bachelor's Degree</p></div><p class="institution-date" data-i18n="education.ccnu.date">Sep 2015 – Jun 2019</p></div>
     </section>
+
+    <section class="page-section" id="experience" aria-labelledby="experience-heading">
+      <h2 class="section-title" id="experience-heading" data-i18n="experience.title">Experience</h2>
+      <div class="institution-row"><div class="institution-mark byte-mark">BD</div><div class="institution-copy"><h3 data-i18n="experience.bytedance.name">ByteDance</h3><p data-i18n="experience.bytedance.role">Intern</p></div><p class="institution-date" data-i18n="experience.bytedance.date">Aug 2026 – Present</p></div>
+    </section>
+
+    <section class="page-section contact-section" id="contact" aria-labelledby="contact-heading">
+      <h2 class="section-title" id="contact-heading" data-i18n="contact.title">Contact</h2>
+      <p data-i18n="contact.text">I welcome conversations about language model reasoning, multi-agent systems, and biomedical AI.</p>
+      <p><a href="mailto:zanelling@mail.ustc.edu.cn">zanelling@mail.ustc.edu.cn</a></p>
+    </section>
+    <footer class="site-footer"><span>© <span id="year"></span> Ziyang Ling</span><a href="#about" aria-label="Back to top">↑</a></footer>
   </main>
 
-  <footer class="site-footer wrap"><span>© <span id="year"></span> Ziyang Ling</span><a href="#top" data-i18n="footer.top">Back to top ↑</a></footer>
+  <dialog class="figure-dialog" id="figure-dialog" aria-label="Research figure"><button type="button" class="dialog-close" aria-label="Close figure">×</button><img id="dialog-image" src="" alt=""><p id="dialog-caption"></p></dialog>
 </body>
 </html>
