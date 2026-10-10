@@ -4,6 +4,7 @@ const translations = {
     'nav.about': '关于', 'nav.news': '动态', 'nav.research': '论文', 'nav.projects': '项目', 'nav.education': '教育', 'nav.experience': '经历', 'nav.contact': '联系',
     'about.p1': '你好！我是<a href="https://www.ustc.edu.cn/" target="_blank" rel="noopener noreferrer">中国科学技术大学</a>计算机科学专业的硕士研究生。我的研究聚焦于大语言模型推理与多智能体系统，尤其关注生物医学和临床场景中的应用。',
     'about.p2': '我关注智能体如何检索证据、协调专门化角色，并做出更可靠的决策。目前我在字节跳动实习。',
+    'about.phd': '目前我正在寻找北美地区的博士研究机会。',
     'portrait.caption': '凌子扬 / Ziyang Ling',
     'news.title': '最新动态', 'news.date1': '2026年10月', 'news.date2': '2026年8月', 'news.date3': '2026年7月',
     'news.item1': '<strong>PRISMATIC</strong> 预印本已发布于 <a href="https://zenodo.org/records/23281340" target="_blank" rel="noopener noreferrer">Zenodo</a>。',
@@ -16,12 +17,15 @@ const translations = {
     'research.prismatic.description': '由专门化智能体协作分析临床信息、完善处方，并通过反馈机制减少药物冲突、提高治疗方案一致性。',
     'link.paper': '论文 ↗', 'link.preprint': '预印本 ↗', 'link.code': '代码 ↗', 'link.github': 'GitHub ↗',
     'projects.title': '项目', 'projects.more': '更多 GitHub 项目',
+    'projects.resem': '面向生物医学多跳问答的推理框架，结合关系引导的知识图谱搜索与证据路径注意力机制。',
+    'projects.dualkl': '持续学习研究实现：通过针对不同任务的分布信任域，约束 LoRA 适配时对已学任务的偏移。',
+    'projects.organoidmind': '面向类器官研究团队和实验室环境的 AI Web 平台，使用 SvelteKit 与 FastAPI 构建。',
     'projects.organoid': '面向类器官研究的数据探索、文献检索、智能问答与知识图谱平台，采用 Vue 和 Django 构建。',
     'projects.subhealth': '用于亚健康模拟与协同决策的多智能体系统探索。',
     'education.title': '教育经历', 'education.ustc.name': '中国科学技术大学', 'education.ustc.degree': '计算机科学 · 硕士', 'education.ustc.date': '2024年9月－至今',
     'education.ccnu.name': '华中师范大学', 'education.ccnu.degree': '学士', 'education.ccnu.date': '2015年9月－2019年6月',
     'experience.title': '工作经历', 'experience.bytedance.name': '字节跳动', 'experience.bytedance.role': '实习生', 'experience.bytedance.date': '2026年8月－至今',
-    'contact.title': '联系', 'contact.text': '欢迎围绕大语言模型推理、多智能体系统和生物医学人工智能交流。'
+    'contact.title': '联系', 'contact.text': '我正在寻找北美地区大语言模型推理、多智能体系统及生物医学人工智能方向的博士研究机会。欢迎相关方向正在招收博士生的导师与我联系。'
   }
 };
 
@@ -31,8 +35,8 @@ const toggle = document.getElementById('language-toggle');
 const detail = document.getElementById('other-language');
 const detailLabel = document.getElementById('other-language-label');
 const detailContent = document.getElementById('other-language-content');
-const englishIntro = "I am a master's student in Computer Science at the University of Science and Technology of China. I study language model reasoning, multi-agent systems, and their biomedical applications. I am currently an intern at ByteDance.";
-const chineseIntro = '我是中国科学技术大学计算机科学专业的硕士研究生，研究大语言模型推理、多智能体系统及其在生物医学和临床场景中的应用。目前我在字节跳动实习。';
+const englishIntro = "I am a master's student in Computer Science at the University of Science and Technology of China. I study language model reasoning, multi-agent systems, and their biomedical applications. I am currently an intern at ByteDance and am seeking PhD opportunities in North America.";
+const chineseIntro = '我是中国科学技术大学计算机科学专业的硕士研究生，研究大语言模型推理、多智能体系统及其在生物医学和临床场景中的应用。目前我在字节跳动实习，并正在寻找北美地区的博士研究机会。';
 
 function setLanguage(language) {
   const current = language === 'zh' ? 'zh' : 'en';
@@ -46,8 +50,8 @@ function setLanguage(language) {
   document.documentElement.lang = current === 'zh' ? 'zh-CN' : 'en';
   document.title = current === 'zh' ? '凌子扬 | Ziyang Ling' : 'Ziyang Ling | 凌子扬';
   document.querySelector('meta[name="description"]').content = current === 'zh'
-    ? '凌子扬的个人主页。中国科学技术大学硕士研究生，研究大语言模型推理、多智能体系统和生物医学人工智能。'
-    : "Ziyang Ling is a master's student at USTC working on language model reasoning, multi-agent systems, and biomedical AI.";
+    ? '凌子扬的个人主页。中国科学技术大学硕士研究生，研究大语言模型推理、多智能体系统和生物医学人工智能，正在寻找北美博士研究机会。'
+    : "Ziyang Ling is a master's student at USTC working on language model reasoning, multi-agent systems, and biomedical AI, and seeking PhD opportunities in North America.";
   toggle.textContent = current === 'zh' ? 'English' : '中文';
   toggle.setAttribute('aria-label', current === 'zh' ? 'Switch to English' : '切换到中文');
   detail.open = false;
