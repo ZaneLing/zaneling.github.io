@@ -22,7 +22,7 @@ const translations = {
     'education.title': '教育经历', 'education.ustc.name': '中国科学技术大学', 'education.ustc.degree': '计算机科学 · 硕士', 'education.ustc.date': '2024年9月－至今',
     'education.ccnu.name': '华中师范大学', 'education.ccnu.degree': '学士', 'education.ccnu.date': '2015年9月－2019年6月',
     'experience.title': '工作经历', 'experience.bytedance.name': '字节跳动', 'experience.bytedance.role': '实习生', 'experience.bytedance.date': '2026年8月－至今',
-    'contact.title': '联系', 'contact.text': '我正在寻找北美地区大语言模型推理、多智能体系统及生物医学人工智能方向的博士研究机会。欢迎相关方向正在招收博士生的导师与我联系。'
+    'contact.title': '联系', 'contact.text': '我正在寻找北美地区大语言模型推理、多智能体系统及生物医学人工智能方向的博士研究机会。'
   }
 };
 
