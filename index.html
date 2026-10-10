@@ -3,206 +3,97 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Academic homepage of Ziyang Ling, an M.S. student at USTC working on NLP, LLM reasoning, multi-agent systems, and biomedical AI.">
-  <meta name="theme-color" content="#f7f7f4">
-  <title>Ziyang Ling</title>
+  <meta name="theme-color" content="#f5f4ef">
+  <meta name="description" content="Ziyang Ling is a master's student at USTC researching language model reasoning, multi-agent systems, and biomedical AI.">
+  <title>Ziyang Ling · Researcher</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
   <header class="site-header">
-    <div class="container header-inner">
-      <a class="name" href="#top">Ziyang Ling</a>
-      <nav class="nav" aria-label="Main navigation">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="#top" aria-label="Ziyang Ling, homepage">ZL<span>.</span></a>
+      <nav aria-label="Main navigation">
         <a href="#about" data-i18n="nav.about">About</a>
-        <a href="#publications" data-i18n="nav.publications">Publications</a>
-        <a href="#projects" data-i18n="nav.projects">Projects</a>
+        <a href="#work" data-i18n="nav.work">Work</a>
         <a href="#contact" data-i18n="nav.contact">Contact</a>
       </nav>
-      <button id="language-toggle" class="language-toggle" type="button" aria-label="切换到中文">中文</button>
+      <button class="language-toggle" id="language-toggle" type="button" aria-label="切换到中文">中文 <span aria-hidden="true">↗</span></button>
     </div>
   </header>
 
-  <main id="top">
-    <section class="hero container">
-      <p class="kicker" data-i18n="hero.kicker">M.S. Student · University of Science and Technology of China</p>
-      <h1 data-i18n="hero.title">Natural language processing, reasoning systems, and biomedical AI.</h1>
-      <p class="lead" data-i18n="hero.lead">I study large language model reasoning, multi-agent systems, knowledge-enhanced AI, and their applications in medicine and scientific discovery.</p>
-      <div class="link-row">
-        <a href="assets/Ziyang_Ling_CV.pdf" target="_blank" rel="noopener" data-i18n="links.cv">CV</a>
-        <a href="https://github.com/ZaneLing" target="_blank" rel="noopener">GitHub</a>
-        <a href="mailto:zanelling@mail.ustc.edu.cn" data-i18n="links.email">Email</a>
+  <main id="main">
+    <section class="hero wrap" id="top" aria-labelledby="hero-name">
+      <div class="hero-main">
+        <p class="eyebrow"><span class="signal" aria-hidden="true"></span><span data-i18n="hero.eyebrow">Researcher · USTC</span></p>
+        <h1 id="hero-name"><span data-i18n="hero.greeting">Hello, I'm</span><br><span class="hero-name" data-i18n="hero.name">Ziyang Ling.</span></h1>
+        <p class="hero-description" data-i18n="hero.description">I work on language model reasoning and multi-agent systems, with a focus on applications in biomedicine.</p>
+        <div class="hero-actions">
+          <a class="primary-link" href="mailto:zanelling@mail.ustc.edu.cn"><span data-i18n="hero.contact">Get in touch</span><span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#work"><span data-i18n="hero.work">Explore my work</span><span aria-hidden="true">↗</span></a>
+        </div>
       </div>
+      <aside class="hero-aside" aria-label="Profiles">
+        <p class="aside-label" data-i18n="hero.connect">Find me online</p>
+        <div class="profile-links">
+          <a href="https://orcid.org/0009-0002-2487-969X" target="_blank" rel="me noopener noreferrer"><span>ORCID</span><span aria-hidden="true">↗</span></a>
+          <a href="https://scholar.google.com/citations?user=Zq9v8esAAAAJ&amp;hl=zh-CN" target="_blank" rel="me noopener noreferrer"><span>Google Scholar</span><span aria-hidden="true">↗</span></a>
+          <a href="https://www.linkedin.com/in/zaneling0704/" target="_blank" rel="me noopener noreferrer"><span>LinkedIn</span><span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/ZaneLing" target="_blank" rel="me noopener noreferrer"><span>GitHub</span><span aria-hidden="true">↗</span></a>
+        </div>
+      </aside>
     </section>
 
-    <section id="about" class="section container">
-      <div class="section-title">
-        <p class="section-number">01</p>
-        <h2 data-i18n="about.title">About</h2>
-      </div>
-      <div class="section-content">
-        <p data-i18n="about.p1">I am a master's student in computer science at the University of Science and Technology of China. My research focuses on reliable reasoning over complex evidence, collaboration among specialized AI agents, and knowledge-intensive biomedical applications.</p>
-        <p data-i18n="about.p2">My current interests include multi-hop question answering, retrieval-augmented generation, knowledge graphs, clinical decision support, and autonomous biological experimentation.</p>
-        <div class="tags" aria-label="Research interests">
-          <span data-i18n="tag.nlp">Natural Language Processing</span>
-          <span data-i18n="tag.reasoning">LLM Reasoning</span>
-          <span data-i18n="tag.agents">Multi-Agent Systems</span>
-          <span data-i18n="tag.rag">Retrieval-Augmented Generation</span>
-          <span data-i18n="tag.biomedical">Biomedical AI</span>
+    <section class="section wrap" id="about" aria-labelledby="about-title">
+      <div class="section-heading"><span class="section-index">01 /</span><h2 id="about-title" data-i18n="about.title">About</h2></div>
+      <div class="section-body about-grid">
+        <div>
+          <p class="statement" data-i18n="about.statement">I am a master's student at the University of Science and Technology of China. I study how AI systems can reason across complex evidence and collaborate on scientific and medical tasks.</p>
+          <p class="muted" data-i18n="about.detail">My interests include multi-hop question answering, retrieval-augmented generation, knowledge graphs, and biomedical AI.</p>
+        </div>
+        <div class="facts">
+          <div><span data-i18n="about.location.label">Based in</span><strong data-i18n="about.location">Hefei, China</strong></div>
+          <div><span data-i18n="about.education.label">Education</span><strong data-i18n="about.education">M.S. · USTC</strong></div>
+          <div><span data-i18n="about.focus.label">Focus</span><strong data-i18n="about.focus">NLP · Agents · Bio AI</strong></div>
         </div>
       </div>
     </section>
 
-    <section id="publications" class="section container">
-      <div class="section-title">
-        <p class="section-number">02</p>
-        <h2 data-i18n="publications.title">Publications</h2>
-      </div>
-      <div class="section-content rows">
-        <article class="item-row">
-          <div class="item-meta"><span>2026</span><span class="status accepted" data-i18n="status.accepted">Accepted</span></div>
-          <div class="item-main">
-            <h3>THOR: A Theta–Gamma Hierarchical Oscillatory Reasoning Framework for Multi-hop QA</h3>
-            <p data-i18n="pub.thor.meta">ACL 2026 Main Conference · First Author</p>
-          </div>
-          <a class="item-link" href="https://github.com/ZaneLing/Theta-Gamma" target="_blank" rel="noopener" aria-label="THOR code">↗</a>
-        </article>
-
-        <article class="item-row">
-          <div class="item-meta"><span>2026</span><span class="status review" data-i18n="status.review">Under Review</span></div>
-          <div class="item-main">
-            <h3>PRISMATIC: Prescription Risk Inspection System for Multi-Agent Treatment Interaction in Clinical Decision-Making</h3>
-            <p data-i18n="pub.prismatic.meta">EMNLP 2026 · First Author</p>
-          </div>
-          <a class="item-link" href="https://github.com/ZaneLing/PRISMATIC" target="_blank" rel="noopener" aria-label="PRISMATIC code">↗</a>
-        </article>
-
-        <article class="item-row">
-          <div class="item-meta"><span>2026</span><span class="status review" data-i18n="status.review">Under Review</span></div>
-          <div class="item-main">
-            <h3>BioMedReason: Heterogeneous Knowledge Embedding Biomedical Reasoning Framework</h3>
-            <p data-i18n="pub.biomedreason.meta">EMNLP 2026 · First Author</p>
-          </div>
-        </article>
-
-        <article class="item-row">
-          <div class="item-meta"><span>2026</span><span class="status review" data-i18n="status.review">Under Review</span></div>
-          <div class="item-main">
-            <h3>BioMARS: A Multi-Agent Robotic System for Autonomous Biological Experiments</h3>
-            <p data-i18n="pub.biomars.meta">Nature 2026</p>
-          </div>
-        </article>
-
-        <article class="item-row">
-          <div class="item-meta"><span>2025</span><span class="status published" data-i18n="status.published">Published</span></div>
-          <div class="item-main">
-            <h3>Resource-efficient Instruction Tuning of Large Language Models for Biomedical Named Entity Recognition</h3>
-            <p>Journal of Biomedical Informatics</p>
-          </div>
-        </article>
-
-        <article class="item-row">
-          <div class="item-meta"><span>2026</span><span class="status accepted" data-i18n="status.accepted">Accepted</span></div>
-          <div class="item-main">
-            <h3>Training-Free BioNEL-RAG: Advancing Biomedical Entity Linking through Retrieval-Augmented Generation and Large Language Models</h3>
-            <p>ICHCI 2026</p>
-          </div>
-        </article>
+    <section class="section wrap" id="work" aria-labelledby="work-title">
+      <div class="section-heading"><span class="section-index">02 /</span><h2 id="work-title" data-i18n="work.title">Selected work</h2></div>
+      <div class="section-body">
+        <div class="work-list">
+          <article class="work-item">
+            <div class="work-meta"><span>2026</span><span>ACL · Research</span></div>
+            <div class="work-content"><h3>THOR</h3><p data-i18n="work.thor">A hierarchical reasoning framework for multi-hop question answering that coordinates evidence and checks errors along the way.</p><div class="work-actions"><a href="https://aclanthology.org/2026.acl-long.935/" target="_blank" rel="noopener noreferrer"><span data-i18n="work.paper">Paper</span> ↗</a><a href="https://github.com/ZaneLing/Theta-Gamma" target="_blank" rel="noopener noreferrer"><span data-i18n="work.code">Code</span> ↗</a></div></div>
+            <span class="work-arrow" aria-hidden="true">↗</span>
+          </article>
+          <article class="work-item">
+            <div class="work-meta"><span>2025–2026</span><span data-i18n="work.project">Project</span></div>
+            <div class="work-content"><h3>Organoid Chat</h3><p data-i18n="work.organoid">An interactive workspace for organoid research, combining literature retrieval, data exploration, question answering, and knowledge graphs.</p><div class="work-actions"><a href="https://github.com/ZaneLing/Organoid-Chat" target="_blank" rel="noopener noreferrer"><span data-i18n="work.repository">Repository</span> ↗</a></div></div>
+            <span class="work-arrow" aria-hidden="true">↗</span>
+          </article>
+          <article class="work-item">
+            <div class="work-meta"><span>2026</span><span data-i18n="work.project">Project</span></div>
+            <div class="work-content"><h3>PRISMATIC</h3><p data-i18n="work.prismatic">A multi-agent system for reviewing prescriptions and supporting medication safety decisions.</p><div class="work-actions"><a href="https://github.com/ZaneLing/PRISMATIC" target="_blank" rel="noopener noreferrer"><span data-i18n="work.repository">Repository</span> ↗</a></div></div>
+            <span class="work-arrow" aria-hidden="true">↗</span>
+          </article>
+        </div>
+        <a class="more-link" href="https://scholar.google.com/citations?user=Zq9v8esAAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener noreferrer"><span data-i18n="work.more">More publications on Google Scholar</span><span aria-hidden="true">↗</span></a>
       </div>
     </section>
 
-    <section id="projects" class="section container">
-      <div class="section-title">
-        <p class="section-number">03</p>
-        <h2 data-i18n="projects.title">Projects</h2>
-      </div>
-      <div class="section-content rows">
-        <article class="item-row project-row">
-          <div class="item-meta"><span>2025–2026</span><span>Vue · Django · RAG</span></div>
-          <div class="item-main">
-            <h3>Organoid Chat</h3>
-            <p data-i18n="project.organoid">Interactive organoid data exploration, literature retrieval, analysis, question answering, and knowledge graph integration.</p>
-          </div>
-          <a class="item-link" href="https://github.com/ZaneLing/Organoid-Chat" target="_blank" rel="noopener" aria-label="Organoid Chat repository">↗</a>
-        </article>
-
-        <article class="item-row project-row">
-          <div class="item-meta"><span>2026</span><span>Python · Multi-Agent AI</span></div>
-          <div class="item-main">
-            <h3>PRISMATIC</h3>
-            <p data-i18n="project.prismatic">A multi-agent prescription review and clinical decision-support system for medication safety.</p>
-          </div>
-          <a class="item-link" href="https://github.com/ZaneLing/PRISMATIC" target="_blank" rel="noopener" aria-label="PRISMATIC repository">↗</a>
-        </article>
-
-        <article class="item-row project-row">
-          <div class="item-meta"><span>2026</span><span>Python · LLM Reasoning</span></div>
-          <div class="item-main">
-            <h3>Theta-Gamma</h3>
-            <p data-i18n="project.theta">A hierarchical oscillatory reasoning implementation for evidence coordination in multi-hop QA.</p>
-          </div>
-          <a class="item-link" href="https://github.com/ZaneLing/Theta-Gamma" target="_blank" rel="noopener" aria-label="Theta-Gamma repository">↗</a>
-        </article>
-
-        <article class="item-row project-row">
-          <div class="item-meta"><span>2024</span><span>Clinical AI · Full Stack</span></div>
-          <div class="item-main">
-            <h3 data-i18n="project.ad.name">AD Screening System</h3>
-            <p data-i18n="project.ad">An AI-assisted Alzheimer's disease screening platform developed with the First Affiliated Hospital of USTC.</p>
-          </div>
-        </article>
-
-        <article class="item-row project-row">
-          <div class="item-meta"><span>2026</span><span>Python · Multi-Agent AI</span></div>
-          <div class="item-main">
-            <h3>Multi-Agent-4-SubHealth</h3>
-            <p data-i18n="project.subhealth">A multi-agent system for subhealth simulation and collaborative decision-making.</p>
-          </div>
-          <a class="item-link" href="https://github.com/ZaneLing/Multi-Agent-4-SubHealth" target="_blank" rel="noopener" aria-label="Multi-Agent-4-SubHealth repository">↗</a>
-        </article>
-      </div>
-    </section>
-
-    <section class="section container">
-      <div class="section-title">
-        <p class="section-number">04</p>
-        <h2 data-i18n="education.title">Education</h2>
-      </div>
-      <div class="section-content rows">
-        <article class="item-row education-row">
-          <div class="item-meta"><span>2024–Present</span></div>
-          <div class="item-main">
-            <h3 data-i18n="education.ustc">University of Science and Technology of China</h3>
-            <p data-i18n="education.ustc.degree">M.S. Student · Computer Science · Hefei, China</p>
-          </div>
-        </article>
-        <article class="item-row education-row">
-          <div class="item-meta"><span>2015–2019</span></div>
-          <div class="item-main">
-            <h3 data-i18n="education.ccnu">Central China Normal University</h3>
-            <p data-i18n="education.ccnu.degree">Bachelor's Degree · Wuhan, China</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="contact" class="section container contact">
-      <div class="section-title">
-        <p class="section-number">05</p>
-        <h2 data-i18n="contact.title">Contact</h2>
-      </div>
-      <div class="section-content">
-        <p data-i18n="contact.text">I am open to research internships and collaborations in NLP, agentic AI, biomedical AI, and large language model reasoning.</p>
-        <p><a class="email" href="mailto:zanelling@mail.ustc.edu.cn">zanelling@mail.ustc.edu.cn</a></p>
+    <section class="section contact-section wrap" id="contact" aria-labelledby="contact-title">
+      <div class="section-heading"><span class="section-index">03 /</span><h2 id="contact-title" data-i18n="contact.title">Let's connect</h2></div>
+      <div class="section-body">
+        <p class="contact-lead" data-i18n="contact.lead">Interested in research collaborations or internships? I'd be glad to hear from you.</p>
+        <a class="contact-email" href="mailto:zanelling@mail.ustc.edu.cn">zanelling@mail.ustc.edu.cn <span aria-hidden="true">↗</span></a>
       </div>
     </section>
   </main>
 
-  <footer class="container footer">
-    <span>© <span id="year"></span> Ziyang Ling</span>
-    <a href="#top" data-i18n="footer.top">Back to top ↑</a>
-  </footer>
-
-  <script src="script.js"></script>
+  <footer class="site-footer wrap"><span>© <span id="year"></span> Ziyang Ling</span><a href="#top" data-i18n="footer.top">Back to top ↑</a></footer>
 </body>
 </html>

@@ -1,38 +1,26 @@
-# Ziyang Ling — Bilingual Academic Homepage
+# Ziyang Ling · Personal Homepage
 
-A compact bilingual academic homepage for GitHub Pages.
+A simple bilingual personal website for GitHub Pages. It is plain HTML, CSS, and JavaScript; no build step is needed.
 
-## Features
+## Content
 
-- English and Chinese interface
-- Language preference stored in the browser
-- Publications and projects displayed as separate rows
-- Responsive layout
-- No framework or build process
-- CV hosted as a static PDF
+- English and Chinese, with an automatic browser-language default and a manual switch
+- Short bio, selected work, and contact information
+- Links to ORCID, Google Scholar, LinkedIn, and GitHub
+- Responsive layout for desktop and mobile
 
-## Deploy
+## Preview locally
 
-1. Create or open the public repository `zaneling.github.io`.
-2. Upload all files in this directory to the repository root.
-3. Open **Settings → Pages**.
-4. Set the source to **Deploy from a branch**.
-5. Select the `main` branch and `/ (root)`.
-6. Visit `https://zaneling.github.io`.
+From this folder, run `python3 -m http.server 8765` and open `http://localhost:8765`.
 
-## Repository structure
+## Publish on GitHub Pages
 
-```text
-zaneling.github.io/
-├── assets/
-│   ├── favicon.svg
-│   └── Ziyang_Ling_CV.pdf
-├── index.html
-├── script.js
-├── style.css
-├── .nojekyll
-└── README.md
-```
+In this repository's **Settings → Pages**, choose **Deploy from a branch**, `main`, and `/ (root)`. The homepage will be available at `https://zaneling.github.io/` after GitHub finishes deploying.
 
-The website is intentionally static. Python is not required for GitHub Pages.
-For Python research repositories, use the separate Python project template supplied with this site.
+## Edit the site
+
+- `index.html` contains the page structure and profile links.
+- `script.js` contains the English and Chinese text.
+- `style.css` contains layout and colors.
+
+The existing `assets/Ziyang_Ling_CV.pdf` is kept in the repository but is not linked from the homepage. Review and update it before making it public again: its publication list includes a 2025 biomedical named entity recognition paper whose published author list does not include Ziyang Ling.

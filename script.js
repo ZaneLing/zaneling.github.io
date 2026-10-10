@@ -1,121 +1,55 @@
-const translations = {
+const copy = {
   en: {
-    "nav.about": "About",
-    "nav.publications": "Publications",
-    "nav.projects": "Projects",
-    "nav.contact": "Contact",
-    "hero.kicker": "M.S. Student · University of Science and Technology of China",
-    "hero.title": "Natural language processing, reasoning systems, and biomedical AI.",
-    "hero.lead": "I study large language model reasoning, multi-agent systems, knowledge-enhanced AI, and their applications in medicine and scientific discovery.",
-    "links.cv": "CV",
-    "links.email": "Email",
-    "about.title": "About",
-    "about.p1": "I am a master's student in computer science at the University of Science and Technology of China. My research focuses on reliable reasoning over complex evidence, collaboration among specialized AI agents, and knowledge-intensive biomedical applications.",
-    "about.p2": "My current interests include multi-hop question answering, retrieval-augmented generation, knowledge graphs, clinical decision support, and autonomous biological experimentation.",
-    "tag.nlp": "Natural Language Processing",
-    "tag.reasoning": "LLM Reasoning",
-    "tag.agents": "Multi-Agent Systems",
-    "tag.rag": "Retrieval-Augmented Generation",
-    "tag.biomedical": "Biomedical AI",
-    "publications.title": "Publications",
-    "status.accepted": "Accepted",
-    "status.review": "Under Review",
-    "status.published": "Published",
-    "pub.thor.meta": "ACL 2026 Main Conference · First Author",
-    "pub.prismatic.meta": "EMNLP 2026 · First Author",
-    "pub.biomedreason.meta": "EMNLP 2026 · First Author",
-    "pub.biomars.meta": "Nature 2026",
-    "projects.title": "Projects",
-    "project.organoid": "Interactive organoid data exploration, literature retrieval, analysis, question answering, and knowledge graph integration.",
-    "project.prismatic": "A multi-agent prescription review and clinical decision-support system for medication safety.",
-    "project.theta": "A hierarchical oscillatory reasoning implementation for evidence coordination in multi-hop QA.",
-    "project.ad.name": "AD Screening System",
-    "project.ad": "An AI-assisted Alzheimer's disease screening platform developed with the First Affiliated Hospital of USTC.",
-    "project.subhealth": "A multi-agent system for subhealth simulation and collaborative decision-making.",
-    "education.title": "Education",
-    "education.ustc": "University of Science and Technology of China",
-    "education.ustc.degree": "M.S. Student · Computer Science · Hefei, China",
-    "education.ccnu": "Central China Normal University",
-    "education.ccnu.degree": "Bachelor's Degree · Wuhan, China",
-    "contact.title": "Contact",
-    "contact.text": "I am open to research internships and collaborations in NLP, agentic AI, biomedical AI, and large language model reasoning.",
-    "footer.top": "Back to top ↑"
+    skip: 'Skip to content', 'nav.about': 'About', 'nav.work': 'Work', 'nav.contact': 'Contact',
+    'hero.eyebrow': 'Researcher · USTC', 'hero.greeting': "Hello, I'm", 'hero.name': 'Ziyang Ling.',
+    'hero.description': 'I work on language model reasoning and multi-agent systems, with a focus on applications in biomedicine.',
+    'hero.contact': 'Get in touch', 'hero.work': 'Explore my work', 'hero.connect': 'Find me online',
+    'about.title': 'About', 'about.statement': "I am a master's student at the University of Science and Technology of China. I study how AI systems can reason across complex evidence and collaborate on scientific and medical tasks.",
+    'about.detail': 'My interests include multi-hop question answering, retrieval-augmented generation, knowledge graphs, and biomedical AI.',
+    'about.location.label': 'Based in', 'about.location': 'Hefei, China', 'about.education.label': 'Education', 'about.education': 'M.S. · USTC', 'about.focus.label': 'Focus', 'about.focus': 'NLP · Agents · Bio AI',
+    'work.title': 'Selected work', 'work.thor': 'A hierarchical reasoning framework for multi-hop question answering that coordinates evidence and checks errors along the way.',
+    'work.organoid': 'An interactive workspace for organoid research, combining literature retrieval, data exploration, question answering, and knowledge graphs.',
+    'work.prismatic': 'A multi-agent system for reviewing prescriptions and supporting medication safety decisions.',
+    'work.paper': 'Paper', 'work.code': 'Code', 'work.project': 'Project', 'work.repository': 'Repository', 'work.more': 'More publications on Google Scholar',
+    'contact.title': "Let's connect", 'contact.lead': "Interested in research collaborations or internships? I'd be glad to hear from you.", 'footer.top': 'Back to top ↑'
   },
   zh: {
-    "nav.about": "关于我",
-    "nav.publications": "论文",
-    "nav.projects": "项目",
-    "nav.contact": "联系",
-    "hero.kicker": "中国科学技术大学 · 计算机科学硕士研究生",
-    "hero.title": "自然语言处理、推理系统与生物医学人工智能。",
-    "hero.lead": "我的研究聚焦于大语言模型推理、多智能体系统、知识增强人工智能，以及这些技术在医学与科学发现中的应用。",
-    "links.cv": "英文简历",
-    "links.email": "邮箱",
-    "about.title": "关于我",
-    "about.p1": "我是中国科学技术大学计算机科学专业硕士研究生。我的研究关注复杂证据上的可靠推理、专门化智能体之间的协作，以及知识密集型生物医学应用。",
-    "about.p2": "目前主要研究兴趣包括多跳问答、检索增强生成、知识图谱、临床决策支持和自主生物实验。",
-    "tag.nlp": "自然语言处理",
-    "tag.reasoning": "大语言模型推理",
-    "tag.agents": "多智能体系统",
-    "tag.rag": "检索增强生成",
-    "tag.biomedical": "生物医学人工智能",
-    "publications.title": "论文",
-    "status.accepted": "已接收",
-    "status.review": "审稿中",
-    "status.published": "已发表",
-    "pub.thor.meta": "ACL 2026 主会 · 第一作者",
-    "pub.prismatic.meta": "EMNLP 2026 · 第一作者",
-    "pub.biomedreason.meta": "EMNLP 2026 · 第一作者",
-    "pub.biomars.meta": "Nature 2026",
-    "projects.title": "项目",
-    "project.organoid": "面向类器官研究的交互式数据探索、文献检索、分析、智能问答与知识图谱集成平台。",
-    "project.prismatic": "面向用药安全的多智能体处方审查与临床决策支持系统。",
-    "project.theta": "用于多跳问答证据协调的层次化振荡推理实现。",
-    "project.ad.name": "阿尔茨海默病筛查系统",
-    "project.ad": "与中国科学技术大学附属第一医院合作开发的人工智能辅助阿尔茨海默病筛查平台。",
-    "project.subhealth": "用于亚健康模拟与协同决策的多智能体系统。",
-    "education.title": "教育经历",
-    "education.ustc": "中国科学技术大学",
-    "education.ustc.degree": "计算机科学硕士研究生 · 中国合肥",
-    "education.ccnu": "华中师范大学",
-    "education.ccnu.degree": "学士 · 中国武汉",
-    "contact.title": "联系",
-    "contact.text": "欢迎围绕自然语言处理、智能体人工智能、生物医学人工智能和大语言模型推理开展研究实习与学术合作。",
-    "footer.top": "返回顶部 ↑"
+    skip: '跳转到正文', 'nav.about': '关于', 'nav.work': '研究', 'nav.contact': '联系',
+    'hero.eyebrow': '研究者 · 中国科学技术大学', 'hero.greeting': '你好，我是', 'hero.name': '凌子扬。',
+    'hero.description': '我研究大语言模型推理与多智能体系统，关注其在生物医学领域的应用。',
+    'hero.contact': '联系我', 'hero.work': '查看研究', 'hero.connect': '学术与社交主页',
+    'about.title': '关于我', 'about.statement': '我是中国科学技术大学的硕士研究生，关注人工智能如何整合复杂证据进行推理，以及如何协作完成科学与医学任务。',
+    'about.detail': '我的研究兴趣包括多跳问答、检索增强生成、知识图谱和生物医学人工智能。',
+    'about.location.label': '所在地', 'about.location': '中国 · 合肥', 'about.education.label': '教育', 'about.education': '中国科学技术大学 · 硕士', 'about.focus.label': '研究方向', 'about.focus': '自然语言处理 · 智能体 · 生物医学 AI',
+    'work.title': '代表工作', 'work.thor': '面向多跳问答的层次化推理框架，协调跨文档证据，并在推理过程中识别与修正错误。',
+    'work.organoid': '面向类器官研究的交互平台，结合文献检索、数据探索、智能问答与知识图谱。',
+    'work.prismatic': '用于处方审查与用药安全决策支持的多智能体系统。',
+    'work.paper': '论文', 'work.code': '代码', 'work.project': '项目', 'work.repository': '项目仓库', 'work.more': '在 Google Scholar 查看更多论文',
+    'contact.title': '保持联系', 'contact.lead': '欢迎就研究合作或实习机会与我交流。', 'footer.top': '返回顶部 ↑'
   }
 };
 
-const button = document.getElementById("language-toggle");
-const metaDescription = document.querySelector('meta[name="description"]');
+const toggle = document.getElementById('language-toggle');
+const description = document.querySelector('meta[name="description"]');
 
-function setLanguage(language) {
-  const dictionary = translations[language];
-
-  document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
-  document.title = language === "zh" ? "凌子扬 | 个人学术主页" : "Ziyang Ling";
-
-  document.querySelectorAll("[data-i18n]").forEach((element) => {
-    const key = element.dataset.i18n;
-    if (dictionary[key]) element.textContent = dictionary[key];
+function applyLanguage(language) {
+  const current = language === 'zh' ? 'zh' : 'en';
+  document.documentElement.lang = current === 'zh' ? 'zh-CN' : 'en';
+  document.title = current === 'zh' ? '凌子扬 · 个人主页' : 'Ziyang Ling · Researcher';
+  description.content = current === 'zh'
+    ? '凌子扬的个人主页。中国科学技术大学硕士研究生，研究大语言模型推理、多智能体系统和生物医学人工智能。'
+    : "Ziyang Ling is a master's student at USTC researching language model reasoning, multi-agent systems, and biomedical AI.";
+  document.querySelectorAll('[data-i18n]').forEach((element) => {
+    const translation = copy[current][element.dataset.i18n];
+    if (translation) element.textContent = translation;
   });
-
-  if (language === "zh") {
-    button.textContent = "EN";
-    button.setAttribute("aria-label", "Switch to English");
-    metaDescription.content = "凌子扬的个人学术主页，研究方向包括自然语言处理、大语言模型推理、多智能体系统和生物医学人工智能。";
-  } else {
-    button.textContent = "中文";
-    button.setAttribute("aria-label", "切换到中文");
-    metaDescription.content = "Academic homepage of Ziyang Ling, an M.S. student at USTC working on NLP, LLM reasoning, multi-agent systems, and biomedical AI.";
-  }
-
-  localStorage.setItem("preferred-language", language);
+  toggle.innerHTML = current === 'zh' ? 'EN <span aria-hidden="true">↗</span>' : '中文 <span aria-hidden="true">↗</span>';
+  toggle.setAttribute('aria-label', current === 'zh' ? 'Switch to English' : '切换到中文');
+  try { localStorage.setItem('preferred-language', current); } catch (_) { /* Storage may be unavailable. */ }
 }
 
-button.addEventListener("click", () => {
-  const nextLanguage = document.documentElement.lang.startsWith("zh") ? "en" : "zh";
-  setLanguage(nextLanguage);
-});
-
-document.getElementById("year").textContent = new Date().getFullYear();
-setLanguage(localStorage.getItem("preferred-language") || "en");
+toggle.addEventListener('click', () => applyLanguage(document.documentElement.lang.startsWith('zh') ? 'en' : 'zh'));
+document.getElementById('year').textContent = new Date().getFullYear();
+let savedLanguage;
+try { savedLanguage = localStorage.getItem('preferred-language'); } catch (_) { /* Storage may be unavailable. */ }
+applyLanguage(savedLanguage || (navigator.language?.startsWith('zh') ? 'zh' : 'en'));
