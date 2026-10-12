@@ -1,6 +1,6 @@
 # Ziyang Ling · Personal Homepage
 
-A bilingual academic homepage for GitHub Pages. It uses plain HTML, CSS, and JavaScript, with no build step. The layout follows [Haolin Yang's homepage](https://tidalharley.github.io/) at the site owner's request; this repository contains its own copy and styling.
+A bilingual academic homepage for GitHub Pages. It uses plain HTML, CSS, and JavaScript, with no build step.
 
 ## Content
 
