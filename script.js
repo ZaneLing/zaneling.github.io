@@ -17,7 +17,7 @@ const translations = {
     'research.prismatic.description': '由专门化智能体协作分析临床信息、完善处方，并通过反馈机制减少药物冲突、提高治疗方案一致性。',
     'research.hindsight.venue': '预印本 · arXiv，2026',
     'research.hindsight.description': '分析大语言模型在动态临床诊断中为何遗漏关键证据，追踪从证据识别到诊断更新的能力缺口。',
-    'research.bionel.venue': '预印本 · arXiv，2026',
+    'research.bionel.venue': '已录用 · IEEE Xplore，2026',
     'research.bionel.description': '无需训练的生物医学实体链接方法：先检索候选概念，再由大语言模型结合上下文选择匹配项。',
     'link.paper': '论文 ↗', 'link.preprint': '预印本 ↗', 'link.code': '代码 ↗', 'link.github': 'GitHub ↗',
     'projects.title': '项目',
@@ -60,7 +60,7 @@ function setLanguage(language) {
   detailContent.textContent = current === 'zh' ? englishIntro : chineseIntro;
   document.querySelector('.profile-portrait img').alt = current === 'zh' ? '凌子扬在水边的照片' : 'Portrait of Ziyang Ling standing beside the water';
   document.querySelectorAll('.paper-figure').forEach((button) => {
-    const subject = button.dataset.caption.startsWith('THOR') ? 'THOR' : 'PRISMATIC';
+    const subject = button.dataset.caption.split(' ')[0];
     button.setAttribute('aria-label', current === 'zh' ? `放大${subject}研究图` : `Enlarge ${button.dataset.caption} figure`);
   });
   document.querySelector('.dialog-close').setAttribute('aria-label', current === 'zh' ? '关闭图片' : 'Close figure');
