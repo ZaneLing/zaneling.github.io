@@ -4,7 +4,7 @@ const translations = {
     'nav.about': '关于', 'nav.news': '动态', 'nav.research': '论文', 'nav.projects': '项目', 'nav.education': '教育', 'nav.experience': '经历', 'nav.contact': '联系',
     'about.p1': '你好！我是<a href="https://www.ustc.edu.cn/" target="_blank" rel="noopener noreferrer">中国科学技术大学</a>计算机科学专业的硕士研究生。我的研究聚焦于大语言模型推理与多智能体系统，尤其关注生物医学和临床场景中的应用。',
     'about.p2': '我关注智能体如何检索证据、协调专门化角色，并做出更可靠的决策。目前我在字节跳动实习。',
-    'about.phd': '目前我正在寻找北美地区的博士研究机会。',
+    'about.phd': '我正在寻找北美地区医学人工智能、临床自然语言处理和医疗健康人工智能方向的博士研究机会。',
     'portrait.caption': '凌子扬 / Ziyang Ling',
     'news.title': '最新动态', 'news.date1': '2026年10月', 'news.date2': '2026年8月', 'news.date3': '2026年7月',
     'news.item1': '<strong>PRISMATIC</strong> 预印本已发布于 <a href="https://zenodo.org/records/23281340" target="_blank" rel="noopener noreferrer">Zenodo</a>。',
@@ -26,7 +26,7 @@ const translations = {
     'education.title': '教育经历', 'education.ustc.name': '中国科学技术大学', 'education.ustc.degree': '计算机科学 · 硕士', 'education.ustc.date': '2024年9月－至今',
     'education.ccnu.name': '华中师范大学', 'education.ccnu.degree': '学士', 'education.ccnu.date': '2015年9月－2019年6月',
     'experience.title': '工作经历', 'experience.bytedance.name': '字节跳动', 'experience.bytedance.role': '实习生', 'experience.bytedance.date': '2026年8月－至今',
-    'contact.title': '联系', 'contact.text': '我正在寻找北美地区大语言模型推理、多智能体系统及生物医学人工智能方向的博士研究机会。'
+    'contact.title': '联系', 'contact.text': '我正在寻找北美地区医学人工智能、临床自然语言处理和医疗健康人工智能方向的博士研究机会。'
   }
 };
 
@@ -36,8 +36,8 @@ const toggle = document.getElementById('language-toggle');
 const detail = document.getElementById('other-language');
 const detailLabel = document.getElementById('other-language-label');
 const detailContent = document.getElementById('other-language-content');
-const englishIntro = "I am a master's student in Computer Science at the University of Science and Technology of China. I study language model reasoning, multi-agent systems, and their biomedical applications. I am currently an intern at ByteDance and am seeking PhD opportunities in North America.";
-const chineseIntro = '我是中国科学技术大学计算机科学专业的硕士研究生，研究大语言模型推理、多智能体系统及其在生物医学和临床场景中的应用。目前我在字节跳动实习，并正在寻找北美地区的博士研究机会。';
+const englishIntro = "I am a master's student in Computer Science at the University of Science and Technology of China. I study language model reasoning, multi-agent systems, and their biomedical applications. I am currently an intern at ByteDance and am seeking PhD opportunities in North America in medical AI, clinical NLP, and AI for healthcare.";
+const chineseIntro = '我是中国科学技术大学计算机科学专业的硕士研究生，研究大语言模型推理、多智能体系统及其在生物医学和临床场景中的应用。目前我在字节跳动实习，并正在寻找北美地区医学人工智能、临床自然语言处理和医疗健康人工智能方向的博士研究机会。';
 
 function setLanguage(language) {
   const current = language === 'zh' ? 'zh' : 'en';
@@ -51,8 +51,8 @@ function setLanguage(language) {
   document.documentElement.lang = current === 'zh' ? 'zh-CN' : 'en';
   document.title = current === 'zh' ? '凌子扬 | Ziyang Ling' : 'Ziyang Ling | 凌子扬';
   document.querySelector('meta[name="description"]').content = current === 'zh'
-    ? '凌子扬的个人主页。中国科学技术大学硕士研究生，研究大语言模型推理、多智能体系统和生物医学人工智能，正在寻找北美博士研究机会。'
-    : "Ziyang Ling is a master's student at USTC working on language model reasoning, multi-agent systems, and biomedical AI, and seeking PhD opportunities in North America.";
+    ? '凌子扬的个人主页。中国科学技术大学硕士研究生，正在寻找北美地区医学人工智能、临床自然语言处理和医疗健康人工智能方向的博士研究机会。'
+    : "Ziyang Ling is a master's student at USTC seeking PhD opportunities in North America in medical AI, clinical NLP, and AI for healthcare.";
   toggle.textContent = current === 'zh' ? 'English' : '中文';
   toggle.setAttribute('aria-label', current === 'zh' ? 'Switch to English' : '切换到中文');
   detail.open = false;
