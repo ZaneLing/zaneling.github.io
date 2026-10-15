@@ -17,6 +17,8 @@ const translations = {
     'research.prismatic.description': '由专门化智能体协作分析临床信息、完善处方，并通过反馈机制减少药物冲突、提高治疗方案一致性。',
     'research.hindsight.venue': '预印本 · arXiv，2026',
     'research.hindsight.description': '分析大语言模型在动态临床诊断中为何遗漏关键证据，追踪从证据识别到诊断更新的能力缺口。',
+    'research.bioprm.venue': '预印本 · arXiv，2026',
+    'research.bioprm.description': '通过上下文过程奖励模型逐步核查生物实验方案，识别操作与实验目标或前后步骤不一致之处。',
     'research.bionel.venue': '已录用 · IEEE Xplore，2026',
     'research.bionel.description': '无需训练的生物医学实体链接方法：先检索候选概念，再由大语言模型结合上下文选择匹配项。',
     'link.paper': '论文 ↗', 'link.preprint': '预印本 ↗', 'link.code': '代码 ↗', 'link.github': 'GitHub ↗',
