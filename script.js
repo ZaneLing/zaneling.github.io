@@ -21,7 +21,7 @@ const translations = {
     'research.resemreason.description': 'ReSemReason 根据问题中的关系语义检索生物医学答案及有效证据路径，避免只凭知识图谱中的可达性判断答案。',
     'research.bioprm.venue': '预印本 · arXiv，2026',
     'research.bioprm.description': '通过上下文过程奖励模型逐步核查生物实验方案，识别操作与实验目标或前后步骤不一致之处。',
-    'research.bionel.venue': '已录用 · IEEE Xplore，2026',
+    'research.bionel.venue': '第六届智能计算与人机交互国际会议（ICHCI 2025），第 304–308 页',
     'research.bionel.description': '无需训练的生物医学实体链接方法：先检索候选概念，再由大语言模型结合上下文选择匹配项。',
     'link.paper': '论文 ↗', 'link.preprint': '预印本 ↗', 'link.code': '代码 ↗', 'link.github': 'GitHub ↗',
     'projects.title': '项目',
