@@ -21,6 +21,8 @@ const translations = {
     'research.resemreason.description': 'ReSemReason 根据问题中的关系语义检索生物医学答案及有效证据路径，避免只凭知识图谱中的可达性判断答案。',
     'research.bioprm.venue': '预印本 · arXiv，2026',
     'research.bioprm.description': '通过上下文过程奖励模型逐步核查生物实验方案，识别操作与实验目标或前后步骤不一致之处。',
+    'research.fgss.venue': '预印本 · arXiv，2026',
+    'research.fgss.description': 'FGSS-BO 将搜索假设与证据、测试结果相连，帮助大语言模型引导的贝叶斯优化方法在多轮搜索中修正决策。',
     'research.bionel.venue': '第六届智能计算与人机交互国际会议（ICHCI 2025），第 304–308 页',
     'research.bionel.description': '无需训练的生物医学实体链接方法：先检索候选概念，再由大语言模型结合上下文选择匹配项。',
     'link.paper': '论文 ↗', 'link.preprint': '预印本 ↗', 'link.code': '代码 ↗', 'link.github': 'GitHub ↗',
@@ -62,6 +64,7 @@ function setLanguage(language) {
   detail.open = false;
   detailLabel.textContent = current === 'zh' ? 'English introduction' : '中文简介';
   detailContent.textContent = current === 'zh' ? englishIntro : chineseIntro;
+  document.getElementById('quote-translation').hidden = current !== 'zh';
   document.querySelector('.profile-portrait img').alt = current === 'zh' ? '凌子扬在水边的照片' : 'Portrait of Ziyang Ling standing beside the water';
   document.querySelectorAll('.paper-figure').forEach((button) => {
     const subject = button.dataset.caption.split(' ')[0];
