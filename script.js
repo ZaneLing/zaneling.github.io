@@ -1,7 +1,7 @@
 const translations = {
   zh: {
     skip: '跳转到正文',
-    'nav.about': '关于', 'nav.news': '动态', 'nav.research': '论文', 'nav.projects': '项目', 'nav.education': '教育', 'nav.experience': '经历', 'nav.contact': '联系',
+    'nav.about': '关于', 'nav.news': '动态', 'nav.research': '论文', 'nav.projects': '项目', 'nav.education': '教育', 'nav.experience': '经历', 'nav.awards': '荣誉', 'nav.contact': '联系',
     'about.p1': '你好！我是<a href="https://www.ustc.edu.cn/" target="_blank" rel="noopener noreferrer">中国科学技术大学</a>计算机科学专业的硕士研究生。我的研究聚焦于大语言模型推理与多智能体系统，尤其关注生物医学和临床场景中的应用。',
     'about.p2': '我关注智能体如何检索证据、协调专门化角色，并做出更可靠的决策。目前我在字节跳动实习。',
     'about.phd': '我正在寻找北美地区医学人工智能、临床自然语言处理和医疗健康人工智能方向的博士研究机会。',
@@ -31,11 +31,22 @@ const translations = {
     'research.ramp.description': 'RAMP 通过人类与多智能体协作，将研究需求转化为视网膜类器官形态发生的生物物理模型；我参与了其中部分智能体模块的工作。',
     'link.paper': '论文 ↗', 'link.preprint': '预印本 ↗', 'link.code': '代码 ↗', 'link.github': 'GitHub ↗', 'link.project-site': '项目官网 ↗',
     'projects.title': '项目',
+    'projects.alzheimer.title': '基于眼底图像的阿尔茨海默病早期筛查',
+    'projects.alzheimer.meta': '2023–2024 · 中国科学技术大学附属第一医院、Orbis 公司',
+    'projects.alzheimer.description': '开发基于眼底图像的早期筛查研究平台，参与相关研究与全栈实现。',
+    'projects.segmentation.title': '小鼠视网膜类器官图像分割',
+    'projects.segmentation.meta': '2025–2026 · 中国科学技术大学',
+    'projects.segmentation.description': '开发基于 Segment Anything Model（SAM）的应用，用于分割小鼠视网膜类器官图像并支持后续分析。',
+    'projects.organoid.meta': '2025–2026 · 中国科学技术大学',
+    'projects.organoid': '为类器官研究实验室开发问答平台，面向生物医学学生提供检索、搜索与数据库关联工具。',
+    'projects.data.title': '生物医学数据交互平台',
+    'projects.data.meta': '2025–2026 · 中国科学技术大学',
+    'projects.data.description': '构建交互式平台，帮助不同研究团队探索类器官实验、实验方案与相关数据。',
     'projects.brick': '用于浏览 LDraw 模型、查看单个积木零件和跟随动画拼搭说明的桌面工作台。',
-    'projects.organoid': '面向类器官研究的数据探索、文献检索、智能问答与知识图谱平台，采用 Vue 和 Django 构建。',
     'education.title': '教育经历', 'education.ustc.name': '中国科学技术大学', 'education.ustc.degree': '计算机科学 · 硕士', 'education.ustc.date': '2024年9月－至今',
     'education.ccnu.name': '华中师范大学', 'education.ccnu.degree': '学士', 'education.ccnu.date': '2015年9月－2019年6月',
     'experience.title': '工作经历', 'experience.bytedance.name': '字节跳动', 'experience.bytedance.role': '实习生', 'experience.bytedance.date': '2026年8月－至今',
+    'awards.title': '荣誉奖励', 'awards.scholarship': '一等学业奖学金', 'awards.ustc': '中国科学技术大学',
     'contact.title': '联系', 'contact.text': '我正在寻找北美地区医学人工智能、临床自然语言处理和医疗健康人工智能方向的博士研究机会。'
   }
 };
