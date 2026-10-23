@@ -1,7 +1,7 @@
 const translations = {
   zh: {
     skip: '跳转到正文',
-    'nav.about': '关于', 'nav.news': '动态', 'nav.research': '论文', 'nav.projects': '项目', 'nav.education': '教育', 'nav.experience': '经历', 'nav.awards': '荣誉', 'nav.contact': '联系',
+    'nav.about': '关于', 'nav.news': '动态', 'nav.ongoing': '在研', 'nav.research': '论文', 'nav.projects': '项目', 'nav.education': '教育', 'nav.experience': '经历', 'nav.awards': '荣誉', 'nav.contact': '联系',
     'about.p1': '你好！我是<a href="https://www.ustc.edu.cn/" target="_blank" rel="noopener noreferrer">中国科学技术大学</a>计算机科学专业的硕士研究生。我的研究聚焦于大语言模型推理与多智能体系统，尤其关注生物医学和临床场景中的应用。',
     'about.p2': '我关注智能体如何检索证据、协调专门化角色，并做出更可靠的决策。目前我在字节跳动实习。',
     'about.phd': '我正在寻找北美地区医学人工智能、临床自然语言处理和医疗健康人工智能方向的博士研究机会。',
@@ -10,6 +10,10 @@ const translations = {
     'news.item1': '<strong>PRISMATIC</strong> 预印本已发布于 <a href="https://zenodo.org/records/23281340" target="_blank" rel="noopener noreferrer">Zenodo</a>。',
     'news.item2': '开始在<strong>字节跳动</strong>实习。',
     'news.item3': '<strong>THOR</strong> 论文发表于 <strong>ACL 2026</strong>。',
+    'ongoing.title': '正在进行的研究',
+    'ongoing.mediator': '混合动机的多学科诊疗模拟：专科智能体持有相互冲突的私人目标，在患者安全约束下协商，研究策略性讨论如何影响临床共识。',
+    'ongoing.rxrsi': '面向处方开具与优化的自进化医疗智能体。',
+    'ongoing.evohos': '贴近真实医院流程的基准与竞技场，用于研究医疗智能体如何在临床环境中持续进化。',
     'research.title': '代表论文', 'research.more': '全部论文', 'research.note': '精选论文与预印本',
     'research.thor.venue': '计算语言学协会年会（ACL）2026',
     'research.thor.description': '受脑节律启发的多跳问答框架，将全局规划与局部证据检索分离，并通过验证与修复提升推理可靠性。',
