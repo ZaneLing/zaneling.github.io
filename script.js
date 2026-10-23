@@ -27,6 +27,8 @@ const translations = {
     'research.biomars.description': 'BioMARS 通过多智能体协作完成生物实验的规划、机器人执行与质控；我负责其中的多智能体部分。',
     'research.bionel.venue': '第六届智能计算与人机交互国际会议（ICHCI 2025），第 304–308 页',
     'research.bionel.description': '无需训练的生物医学实体链接方法：先检索候选概念，再由大语言模型结合上下文选择匹配项。',
+    'research.ramp.venue': '已投稿 PNAS · 2026',
+    'research.ramp.description': 'RAMP 通过人类与多智能体协作，将研究需求转化为视网膜类器官形态发生的生物物理模型；我参与了其中部分智能体模块的工作。',
     'link.paper': '论文 ↗', 'link.preprint': '预印本 ↗', 'link.code': '代码 ↗', 'link.github': 'GitHub ↗', 'link.project-site': '项目官网 ↗',
     'projects.title': '项目',
     'projects.brick': '用于浏览 LDraw 模型、查看单个积木零件和跟随动画拼搭说明的桌面工作台。',
