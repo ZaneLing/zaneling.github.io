@@ -46,6 +46,7 @@ const translations = {
     'education.title': '教育经历', 'education.ustc.name': '中国科学技术大学', 'education.ustc.degree': '计算机科学 · 硕士', 'education.ustc.date': '2024年9月－至今',
     'education.ccnu.name': '华中师范大学', 'education.ccnu.degree': '学士', 'education.ccnu.date': '2015年9月－2019年6月',
     'experience.title': '工作经历', 'experience.bytedance.name': '字节跳动', 'experience.bytedance.role': '实习生', 'experience.bytedance.date': '2026年8月－至今',
+    'experience.midea.name': '美的集团', 'experience.midea.role': '研究实习生', 'experience.midea.date': '2021–2023年',
     'awards.title': '荣誉奖励', 'awards.scholarship': '一等学业奖学金', 'awards.ustc': '中国科学技术大学',
     'contact.title': '联系', 'contact.text': '我正在寻找北美地区医学人工智能、临床自然语言处理和医疗健康人工智能方向的博士研究机会。'
   }
