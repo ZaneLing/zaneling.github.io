@@ -42,7 +42,6 @@ const translations = {
     'projects.data.title': '生物医学数据交互平台',
     'projects.data.meta': '2025–2026 · 中国科学技术大学',
     'projects.data.description': '构建交互式平台，帮助不同研究团队探索类器官实验、实验方案与相关数据。',
-    'projects.brick': '用于浏览 LDraw 模型、查看单个积木零件和跟随动画拼搭说明的桌面工作台。',
     'education.title': '教育经历', 'education.ustc.name': '中国科学技术大学', 'education.ustc.degree': '计算机科学 · 硕士', 'education.ustc.date': '2024年9月－至今',
     'education.ccnu.name': '华中师范大学', 'education.ccnu.degree': '学士', 'education.ccnu.date': '2015年9月－2019年6月',
     'experience.title': '工作经历', 'experience.bytedance.name': '字节跳动', 'experience.bytedance.role': '实习生', 'experience.bytedance.date': '2026年8月－至今',
