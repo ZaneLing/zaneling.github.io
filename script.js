@@ -1,7 +1,7 @@
 const translations = {
   zh: {
     skip: '跳转到正文',
-    'nav.about': '关于', 'nav.news': '动态', 'nav.ongoing': '在研', 'nav.research': '论文', 'nav.projects': '项目', 'nav.education': '教育', 'nav.experience': '经历', 'nav.awards': '荣誉', 'nav.contact': '联系',
+    'nav.about': '关于', 'nav.news': '动态', 'nav.ongoing': '在研', 'nav.research': '论文', 'nav.projects': '项目', 'nav.education': '教育', 'nav.experience': '经历', 'nav.awards': '荣誉', 'nav.beyond': '学术之外', 'nav.contact': '联系',
     'about.p1': '你好！我是<a href="https://www.ustc.edu.cn/" target="_blank" rel="noopener noreferrer">中国科学技术大学</a>计算机科学专业的硕士研究生。我的研究聚焦于大语言模型推理与多智能体系统，尤其关注生物医学和临床场景中的应用。',
     'about.p2': '我关注智能体如何检索证据、协调专门化角色，并做出更可靠的决策。目前我在字节跳动实习。',
     'about.phd': '我正在寻找北美地区医学人工智能、临床自然语言处理和医疗健康人工智能方向的博士研究机会。',
@@ -51,6 +51,10 @@ const translations = {
     'experience.title': '工作经历', 'experience.bytedance.name': '字节跳动', 'experience.bytedance.role': '实习生', 'experience.bytedance.date': '2026年8月－至今',
     'experience.midea.name': '美的集团', 'experience.midea.role': '研究实习生', 'experience.midea.date': '2021–2023年',
     'awards.title': '荣誉奖励', 'awards.scholarship': '一等学业奖学金', 'awards.ustc': '中国科学技术大学',
+    'beyond.title': '学术之外', 'beyond.note': '旅途与日常的一些瞬间。',
+    'beyond.yuanmingyuan': '圆明园', 'beyond.lotus': '圆明园的荷叶', 'beyond.cat': '寺猫', 'beyond.suzhou': '苏州园林',
+    'beyond.summer': '颐和园', 'beyond.rainier': '雷尼尔山', 'beyond.seattle': '西雅图海滨', 'beyond.ruby': '红宝石海滩',
+    'beyond.credit': '摄影：凌子扬', 'beyond.more': '在 Flickr 查看更多 ↗',
     'contact.title': '联系', 'contact.text': '我正在寻找北美地区医学人工智能、临床自然语言处理和医疗健康人工智能方向的博士研究机会。'
   }
 };
@@ -90,6 +94,10 @@ function setLanguage(language) {
     button.setAttribute('aria-label', current === 'zh' ? `放大${subject}研究图` : `Enlarge ${button.dataset.caption} figure`);
   });
   document.querySelector('.dialog-close').setAttribute('aria-label', current === 'zh' ? '关闭图片' : 'Close figure');
+  document.getElementById('photo-gallery').setAttribute('aria-label', current === 'zh' ? '凌子扬的摄影作品' : 'Photos by Ziyang Ling');
+  document.querySelector('.gallery-controls').setAttribute('aria-label', current === 'zh' ? '照片滚动控制' : 'Photo gallery controls');
+  document.querySelector('.gallery-arrow[data-direction="-1"]').setAttribute('aria-label', current === 'zh' ? '向左滚动照片' : 'Scroll photos left');
+  document.querySelector('.gallery-arrow[data-direction="1"]').setAttribute('aria-label', current === 'zh' ? '向右滚动照片' : 'Scroll photos right');
   try { localStorage.setItem('preferred-language', current); } catch (_) { /* Continue without storage. */ }
 }
 
@@ -119,6 +127,22 @@ window.addEventListener('scroll', () => {
 }, {passive:true});
 window.addEventListener('resize', updateActiveSection);
 updateActiveSection();
+
+const photoGallery = document.getElementById('photo-gallery');
+const galleryArrows = [...document.querySelectorAll('.gallery-arrow')];
+function updateGalleryArrows() {
+  const maxScroll = photoGallery.scrollWidth - photoGallery.clientWidth;
+  galleryArrows[0].disabled = photoGallery.scrollLeft <= 1;
+  galleryArrows[1].disabled = maxScroll <= 1 || photoGallery.scrollLeft >= maxScroll - 1;
+}
+galleryArrows.forEach((button) => button.addEventListener('click', () => {
+  const distance = Math.max(photoGallery.clientWidth * 0.75, 260);
+  photoGallery.scrollBy({left: Number(button.dataset.direction) * distance, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
+}));
+photoGallery.addEventListener('scroll', updateGalleryArrows, {passive:true});
+window.addEventListener('resize', updateGalleryArrows);
+window.addEventListener('load', updateGalleryArrows);
+requestAnimationFrame(updateGalleryArrows);
 
 const figureDialog = document.getElementById('figure-dialog');
 const dialogImage = document.getElementById('dialog-image');
