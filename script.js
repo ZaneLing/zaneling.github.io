@@ -55,7 +55,8 @@ const translations = {
     'beyond.yuanmingyuan': '圆明园', 'beyond.lotus': '圆明园的荷叶', 'beyond.cat': '寺猫', 'beyond.suzhou': '苏州园林',
     'beyond.summer': '颐和园', 'beyond.rainier': '雷尼尔山', 'beyond.seattle': '西雅图海滨', 'beyond.ruby': '红宝石海滩',
     'beyond.credit': '摄影：凌子扬', 'beyond.more': '在 Flickr 查看更多 ↗',
-    'contact.title': '联系', 'contact.text': '我正在寻找北美地区医学人工智能、临床自然语言处理和医疗健康人工智能方向的博士研究机会。'
+    'contact.title': '联系', 'contact.text': '我正在寻找北美地区医学人工智能、临床自然语言处理和医疗健康人工智能方向的博士研究机会。',
+    'footer.views': '访问次数：'
   }
 };
 
@@ -106,6 +107,22 @@ document.getElementById('year').textContent = new Date().getFullYear();
 let savedLanguage;
 try { savedLanguage = localStorage.getItem('preferred-language'); } catch (_) { /* Continue without storage. */ }
 setLanguage(savedLanguage || (navigator.language?.startsWith('zh') ? 'zh' : 'en'));
+
+async function updatePageViews() {
+  if (window.location.hostname !== 'zaneling.github.io') return;
+  const count = document.getElementById('page-view-count');
+  try {
+    const response = await fetch('https://countapi.mileshilliard.com/api/v1/hit/zaneling_github_io_homepage_views_20261030', {cache: 'no-store'});
+    if (!response.ok) throw new Error(`Counter returned ${response.status}`);
+    const data = await response.json();
+    const value = Number(data.value);
+    if (!Number.isSafeInteger(value) || value < 0) throw new Error('Invalid count');
+    count.textContent = new Intl.NumberFormat(document.documentElement.lang).format(value);
+  } catch (_) {
+    count.textContent = '—';
+  }
+}
+updatePageViews();
 
 const sections = [...document.querySelectorAll('main > section[id]')];
 const navLinks = [...document.querySelectorAll('.nav-link')];
