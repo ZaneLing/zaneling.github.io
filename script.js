@@ -7,7 +7,7 @@ const translations = {
     'about.phd': '我正在寻找北美地区医学人工智能、临床自然语言处理和医疗健康人工智能方向的博士研究机会。',
     'portrait.caption': '凌子扬 / Ziyang Ling',
     'news.title': '最新动态', 'news.date1': '2026年10月', 'news.date2': '2026年8月', 'news.date3': '2026年7月',
-    'news.item1': '<strong>PRISMATIC</strong> 预印本已发布于 <a href="https://zenodo.org/records/23281340" target="_blank" rel="noopener noreferrer">Zenodo</a>。',
+    'news.item1': '论文已投稿 <strong>ICLR</strong>。',
     'news.item2': '开始在<strong>字节跳动</strong>实习。',
     'news.item3': '<strong>THOR</strong> 论文发表于 <strong>ACL 2026</strong>。',
     'ongoing.title': '正在进行的研究',
