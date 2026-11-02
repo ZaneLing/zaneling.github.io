@@ -33,7 +33,7 @@ const translations = {
     'research.bionel.description': '无需训练的生物医学实体链接方法：先检索候选概念，再由大语言模型结合上下文选择匹配项。',
     'research.rotds.venue': '在投稿件',
     'research.rotds.description': '研究利用大语言模型的 RoT 蒸馏方法开展半监督生物医学关系抽取。',
-    'research.ramp.venue': '已投稿 PNAS · 2026',
+    'research.ramp.venue': '在投稿件',
     'research.ramp.description': 'RAMP 通过人类与多智能体协作，将研究需求转化为视网膜类器官形态发生的生物物理模型；我参与了其中部分智能体模块的工作。',
     'link.paper': '论文 ↗', 'link.preprint': '预印本 ↗', 'link.code': '代码 ↗', 'link.github': 'GitHub ↗', 'link.project-site': '项目官网 ↗',
     'projects.title': '项目',
