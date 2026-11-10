@@ -4,8 +4,8 @@ const translations = {
     'nav.about': '关于', 'nav.news': '动态', 'nav.ongoing': '在研', 'nav.research': '论文', 'nav.projects': '项目', 'nav.education': '教育', 'nav.experience': '经历', 'nav.awards': '荣誉', 'nav.beyond': '学术之外', 'nav.contact': '联系',
     'about.p1': '你好！我是<a href="https://www.ustc.edu.cn/" target="_blank" rel="noopener noreferrer">中国科学技术大学</a>计算机科学专业的硕士研究生。我的研究聚焦于大语言模型推理与多智能体系统，尤其关注生物医学和临床场景中的应用。',
     'about.p2': '我关注智能体如何检索证据、协调专门化角色，并做出更可靠的决策。目前我在字节跳动实习。',
-    'about.phd': '我正在寻找北美地区医学人工智能、临床自然语言处理和医疗健康人工智能方向的博士研究机会。',
-    'phd.title': '寻找北美博士研究机会',
+    'about.phd': '我正在寻找医学人工智能、临床自然语言处理和医疗健康人工智能方向的博士研究机会。',
+    'phd.title': '寻找博士研究机会',
     'phd.fields': '医学人工智能 · 临床自然语言处理 · 医疗健康人工智能',
     'phd.contact': '联系我 →', 'phd.cv': '查看简历（PDF）↗',
     'portrait.caption': '凌子扬 / Ziyang Ling',
@@ -62,7 +62,7 @@ const translations = {
     'beyond.yuanmingyuan': '圆明园', 'beyond.lotus': '圆明园的荷叶', 'beyond.cat': '寺猫', 'beyond.suzhou': '苏州园林',
     'beyond.summer': '颐和园', 'beyond.rainier': '雷尼尔山', 'beyond.seattle': '西雅图海滨', 'beyond.ruby': '红宝石海滩',
     'beyond.credit': '摄影：凌子扬', 'beyond.more': '在 Flickr 查看更多 ↗',
-    'contact.title': '联系', 'contact.text': '我正在寻找北美地区医学人工智能、临床自然语言处理和医疗健康人工智能方向的博士研究机会。',
+    'contact.title': '联系', 'contact.text': '我正在寻找医学人工智能、临床自然语言处理和医疗健康人工智能方向的博士研究机会。',
     'footer.views': '访问次数：'
   }
 };
@@ -73,8 +73,8 @@ const toggle = document.getElementById('language-toggle');
 const detail = document.getElementById('other-language');
 const detailLabel = document.getElementById('other-language-label');
 const detailContent = document.getElementById('other-language-content');
-const englishIntro = "I am a master's student in Computer Science at the University of Science and Technology of China. I study language model reasoning, multi-agent systems, and their biomedical applications. I am currently an intern at ByteDance and am seeking PhD opportunities in North America in medical AI, clinical NLP, and AI for healthcare.";
-const chineseIntro = '我是中国科学技术大学计算机科学专业的硕士研究生，研究大语言模型推理、多智能体系统及其在生物医学和临床场景中的应用。目前我在字节跳动实习，并正在寻找北美地区医学人工智能、临床自然语言处理和医疗健康人工智能方向的博士研究机会。';
+const englishIntro = "I am a master's student in Computer Science at the University of Science and Technology of China. I study language model reasoning, multi-agent systems, and their biomedical applications. I am currently an intern at ByteDance and am seeking PhD opportunities in medical AI, clinical NLP, and AI for healthcare.";
+const chineseIntro = '我是中国科学技术大学计算机科学专业的硕士研究生，研究大语言模型推理、多智能体系统及其在生物医学和临床场景中的应用。目前我在字节跳动实习，并正在寻找医学人工智能、临床自然语言处理和医疗健康人工智能方向的博士研究机会。';
 
 function setLanguage(language) {
   const current = language === 'zh' ? 'zh' : 'en';
@@ -88,8 +88,8 @@ function setLanguage(language) {
   document.documentElement.lang = current === 'zh' ? 'zh-CN' : 'en';
   document.title = current === 'zh' ? '凌子扬 | Ziyang Ling' : 'Ziyang Ling | 凌子扬';
   document.querySelector('meta[name="description"]').content = current === 'zh'
-    ? '凌子扬的个人主页。中国科学技术大学硕士研究生，正在寻找北美地区医学人工智能、临床自然语言处理和医疗健康人工智能方向的博士研究机会。'
-    : "Ziyang Ling is a master's student at USTC seeking PhD opportunities in North America in medical AI, clinical NLP, and AI for healthcare.";
+    ? '凌子扬的个人主页。中国科学技术大学硕士研究生，正在寻找医学人工智能、临床自然语言处理和医疗健康人工智能方向的博士研究机会。'
+    : "Ziyang Ling is a master's student at USTC seeking PhD opportunities in medical AI, clinical NLP, and AI for healthcare.";
   toggle.textContent = current === 'zh' ? 'English' : '中文';
   toggle.setAttribute('aria-label', current === 'zh' ? 'Switch to English' : '切换到中文');
   detail.open = false;
